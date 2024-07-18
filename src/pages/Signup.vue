@@ -1,5 +1,6 @@
 <template>
-  <v-container class="signup bg-primary text-grey" fluid fill-height>
+  <section class="bg-primary" style="width: 100%;">
+  <v-container class="d-flex justify-center align-center" style="height: 100vh;">
     <v-row align="center" justify="center">
       <v-col cols="12" sm="7" md="5" lg="5" class="bg-white rounded-lg mt-5">
         <v-card class="form-center" flat>
@@ -7,12 +8,12 @@
             <div class="d-flex justify-center">
               <div>
                 <v-img :width="200" src="/src/assets/oxfordtrans 1.png" contain></v-img>
-                <div class="text-h6 text-dark text-center">Signup Your Account</div>
+                <div class="text-label text-dark text-center">Signup Your Account</div>
               </div>
             </div>
             <v-form ref="form" class="mt-2 px-5" @submit.prevent="submitForm">
               <div>
-                <div class="text-h6 text-dark">Username</div>
+                <div class="text-label text-dark">Username</div>
                 <v-text-field 
                   v-model="name" 
                   :rules="nameRules" 
@@ -22,7 +23,7 @@
                 ></v-text-field>
               </div>
               <div>
-                <div class="text-h6 text-dark">Email</div>
+                <div class="text-label text-dark">Email</div>
                 <v-text-field 
                   v-model="email" 
                   :rules="emailRules" 
@@ -32,7 +33,7 @@
                 ></v-text-field>
               </div>
               <div>
-                <div class="text-h6 text-dark" >Password</div>
+                <div class="text-label text-dark" >Password</div>
                 <v-text-field 
                   v-model="password" 
                   :rules="passwordRules" 
@@ -44,16 +45,14 @@
                   @click:append-inner="visible = !visible"
                 ></v-text-field>
               </div>
-              <v-btn block class="bg-light-blue-darken-4" @click="submitForm" flat
-              
+              <v-btn block class="bg-btn" @click="submitForm" flat
               >Sign Up</v-btn>
             </v-form>
-            <div class="px-5 mt-5 text-subtitle-1
-            font-weight-bold text-grey-darken-4"
+            <div class="px-5 mt-5"
             >Already have an account 
-            <span class="text-subtitle-1 font-weight-bold">
+            <span class="text-link">
             <router-link to="/login"
-             class="text-grey-darken-4"
+             class="textblack"
              >sign in</router-link>
             </span></div>
           </v-card-text>
@@ -61,6 +60,7 @@
       </v-col>
     </v-row>
   </v-container>
+  </section>
 </template>
 <script>  
 import { ref } from 'vue';
@@ -113,3 +113,21 @@ export default {
   }
 };
 </script>
+<style>
+.text-label{
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+.text-link{
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+}
+.textblack{
+  color: #000000;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+}
+</style>
