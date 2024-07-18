@@ -44,9 +44,18 @@
                   @click:append-inner="visible = !visible"
                 ></v-text-field>
               </div>
-              <v-btn block class="bg-light-blue-darken-4" type="submit" flat>Sign Up</v-btn>
+              <v-btn block class="bg-light-blue-darken-4" @click="submitForm" flat
+              
+              >Sign Up</v-btn>
             </v-form>
-            <div class="px-5 mt-5 text-subtitle-1 font-weight-bold text-grey-darken-4">Already have an account <span class="text-subtitle-1 font-weight-bold"><router-link to="/login" class="text-grey-darken-4">sign in</router-link></span></div>
+            <div class="px-5 mt-5 text-subtitle-1
+            font-weight-bold text-grey-darken-4"
+            >Already have an account 
+            <span class="text-subtitle-1 font-weight-bold">
+            <router-link to="/login"
+             class="text-grey-darken-4"
+             >sign in</router-link>
+            </span></div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -54,35 +63,53 @@
   </v-container>
 </template>
 <script>  
-// import swal from 'sweetalert2';  
-// import axios from 'axios';  
+import { ref } from 'vue';
+import { register} from '../auth';
+import { useRouter } from 'vue-router';
 
 export default {  
   name: 'Signup',  
-  data() {  
-    return {  
-      users: [],  
-      name: '',  
-      email: '',  
-      password: '',  
-      visible: false,  
-      nameRules: [  
-        v => !!v || 'Name is required',  
-        v => (v && v.length <= 7) || 'Name must be less than or equal to 7 characters',  
-      ],  
-      emailRules: [  
-        v => !!v || 'Email is required',  
-        v => /.+@.+\..+/.test(v) || 'Email must be valid',  
-      ],  
-      passwordRules: [  
-        v => !!v || 'Password is required',  
-        v => (v && v.length >= 6) || 'Password must be at least 6 characters',  
-      ],  
-      confirmPasswordRules: [  
-        v => !!v || 'Confirm password is required',  
-        v => (v === this.password) || 'Passwords must match',  
-      ],  
-    }
+  setup() {
+    const name = ref('');
+    const email = ref('');
+    const password = ref('');
+    const visible = ref('false');
+
+    const nameRules = [
+      v => !!v || 'Name is required',
+      v => (v && v.length <= 7) || 'Name must be less than or equal to 7 characters',
+    ];
+
+    const emailRules = [
+      v => !!v || 'Email is required',
+      v => /.+@.+\..+/.test(v) || 'Email must be valid',
+    ];
+
+    const passwordRules = [
+      v => !!v || 'Password is required',
+      v => (v && v.length >= 6) || 'Password must be at least 6 characters',
+    ];
+  const router = useRouter();
+    const submitForm = async () => {
+      try {
+        await register(email.value, password.value);
+      } catch (error) {
+        
+      } finally {
+        router.push('/login')
+
+      }
+    };
+    return {
+      name,
+      email,
+      password,
+      visible,
+      nameRules,
+      emailRules,
+      passwordRules,
+      submitForm
+    };
   }
-}
+};
 </script>
