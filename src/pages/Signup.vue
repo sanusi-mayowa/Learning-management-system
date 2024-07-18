@@ -93,10 +93,10 @@ export default {
     const submitForm = async () => {
       try {
         await register(email.value, password.value);
+        router.push('/login')
       } catch (error) {
         
       } finally {
-        router.push('/login')
 
       }
     };
