@@ -45,7 +45,7 @@
               <v-btn block class="bg-btn"
                type="submit" flat>Sign In</v-btn>
             </v-form>
-            <div class="px-5 mt-5 text-link">Don't have an account? <span class="text-link"><router-link to="/" class="textblack">sign up</router-link></span></div>
+            <div class="px-5 mt-5 text-link">Don't have an account? <span class="text-link"><router-link to="/signup" class="textblack">sign up</router-link></span></div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -59,7 +59,7 @@ import { login } from '../auth';
 import { useRouter } from 'vue-router';
 
 export default {
-name: 'Login',
+name: 'Signin',
 setup() {
   const email = ref('');
   const password = ref('');

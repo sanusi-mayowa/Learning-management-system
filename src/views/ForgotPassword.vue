@@ -1,13 +1,12 @@
 <template>
     <section style="width: 100%;" class="bg-primary">
     <v-container class="d-flex justify-center align-center" style="height: 100vh;">
-    <!-- <v-container class="login bg-primary text-grey" fluid fill-height> -->
-      <v-row align="center" justify="center" class="d-flex align-center justify-center">
-        <v-col cols="12" sm="7" md="5" lg="5" class="bg-white rounded-lg mt-5">
-          <v-card class="form-center" flat>
-            <v-card-text>
-              <div class="d-flex justify-center mb-5">
-                <div>
+      <v-row align="center" justify="center">
+      <v-col cols="12" sm="7" md="5" lg="5" class="bg-white rounded-lg mt-5">
+        <v-card class="form-center" flat>
+          <v-card-text>
+            <div class="d-flex justify-center">
+              <div>
                   <v-img :width="200" src="/src/assets/oxfordtrans 1.png" contain></v-img>
                   <div class="text-label text-dark text-center mb-5">Forgot Password</div>
                 </div>
@@ -26,7 +25,7 @@
                 <v-btn block class="bg-btn"
                  type="submit" flat>Submit</v-btn>
               </v-form>
-              <div class="d-flex justify-end mt-5 text-link">Already have an account? <span class="text-link"> <router-link to="/login" class="textblack"> sign in</router-link></span></div>
+              <div class="d-flex justify-end mt-5 text-link">Already have an account? <span class="text-link"> <router-link to="/" class="textblack"> sign in</router-link></span></div>
             </v-card-text>
           </v-card>
         </v-col>

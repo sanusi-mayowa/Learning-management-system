@@ -10,8 +10,8 @@ export default createVuetify({
         colors: {
           primary: '#E8F1F2',
           btn: '#00173D',
-          success: '#3cd1c2',
-          info: '#ffaa2c',
+          diploma: '#0a5f6f',
+          list: '#cze8f8',
           error: '#f83e70'
         },
         variables: {

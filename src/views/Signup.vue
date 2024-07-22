@@ -51,7 +51,7 @@
             <div class="px-5 mt-5"
             >Already have an account 
             <span class="text-link">
-            <router-link to="/login"
+            <router-link to="/"
              class="textblack"
              >sign in</router-link>
             </span></div>
@@ -93,7 +93,7 @@ export default {
     const submitForm = async () => {
       try {
         await register(email.value, password.value);
-        router.push('/login')
+        router.push('/')
       } catch (error) {
         
       } finally {

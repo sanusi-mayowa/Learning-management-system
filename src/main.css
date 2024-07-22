@@ -1,4 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
-}  
+    height: 100vh;
+    background: #E8F1F2;
+}
+.sidebar{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    border-radius: 16px;
+    padding: 0 0  16px;
+    transition: width 0.4s;
+    height: 95vh !important;
+    position: fixed !important;
+}
+.topbar{
+    position: fixed !important;
+}
+.ham{
+    margin-top: -20px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #b8b5b5;
+    border-radius: 10px;
+    padding-top: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.small{
+    font-size: 9px;
+    color: #b8b5b5;
+}
+.sidebar-btn {
+    gap: 16px;
+    border-top-right-radius: 16px !important;
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    font-size: 16px;
+    line-height: 1;
+    margin: 13px;
+    width: 200px;
+}
+.sidebar-btn img{
+    width: 35px;
+    max-width: 35px;
+    min-width: 35px;
+    padding-right: 10px;
+} 
+.intro{
+    font-weight: 700;
+    font-size: 17px;
+}
+.home .banner{
+    width: 100%;
+}
+.diploma-img{
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
+}
+.diploma-round{
+    border-radius: 16px !important;
+}
+.diploma-text-span{
+    font-size: 13px !important;
+}
