@@ -53,7 +53,7 @@ export default {
     const submitForm = async () => {
       try {
         await sendResetEmail(email.value);
-        router.push('/login');
+        router.push('/');
       } catch (error) {
         // Error handling is done in auth.js using SweetAlert2
       } finally {

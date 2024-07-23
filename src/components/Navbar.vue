@@ -3,7 +3,7 @@
       v-model="drawer"
       :rail="rail"
       permanent
-      class="bg-btn sidebar" app
+      class="bg-btn d-none d-sm-block sidebar" app
     >
       <v-list-item class="d-flex justify-space-between align-center px-0 logo">
         <img :width="100" src="/src/assets/oxfordtrans 1.png" alt="">
@@ -11,22 +11,15 @@
           <v-btn
             variant="text"
             @click.stop="toggleRail"
-            class="ham "
+            class="ham"
           >
             <img :width="30" src="/src/assets/Group 37962.png" class="pr-1">
           </v-btn>
         </template>
       </v-list-item>
       <v-list-item>
-        <div class="profile-main px-3">
-          <div class="profile px-3">
-            <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div>
-            <div v-if="!rail">
-              <span>Hi, Alex</span>
-              <br>
-              <small class="small">E173037</small>
-            </div>
-          </div>
+        <div class="profile-main">
+          <UserProfile />
         </div>
       </v-list-item>
       <div class="d-flex justify-center">
@@ -46,7 +39,41 @@
         </v-list>
       </div>
     </v-navigation-drawer>
-    <v-app-bar app flat class="bg-primary pt-5 topbar">
+    <!-- tab and mobile devices from 599px downward -->
+    <nav class="bg-btn w-25 nav-small d-sm-none">
+      <v-list-item class="d-flex justify-space-between align-center px-0 logo">
+        <img :width="80" src="/src/assets/oxfordtrans 1.png" alt="">
+        <template v-slot:append>
+          <v-btn
+            variant="text"
+            class="ham"
+          >
+            <img :width="25" src="/src/assets/Group 37962.png" class="pr-1">
+          </v-btn>
+        </template>
+      </v-list-item>
+      <v-list-item>
+        <div class="profile-main">
+          <UserProfile />
+        </div>
+      </v-list-item>
+      <div class="d-flex justify-center">
+        <v-list nav>
+          <v-list-item
+            v-for="(link, i) in links"
+            :key="i"
+            :to="link.route"
+            router
+            class="bg-list sidebar-btn px-5"
+          >
+            <template v-slot:prepend>
+              <img :src="link.avatar">
+            </template>
+          </v-list-item>
+        </v-list>
+      </div>
+    </nav>
+    <v-app-bar app flat class="bg-primary pt-5 topbar header-small">
       <v-toolbar-title class="pl-5">
         <span class="text-btn intro">{{ pageTitle }}</span>
       </v-toolbar-title>
@@ -59,9 +86,11 @@
       </v-btn>
     </v-app-bar>
 </template>
-
 <script>
+import UserProfile from '@/components/UserProfile.vue';
 export default {
+  name: 'Navbar',
+  components: { UserProfile},
   data() {
     return {
       drawer: true,

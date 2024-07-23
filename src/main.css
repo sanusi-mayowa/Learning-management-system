@@ -4,7 +4,7 @@ body {
     height: 100vh;
     background: #E8F1F2;
 }
-.sidebar{
+.sidebar, .nav-small{
     margin-top: 16px;
     margin-bottom: 16px;
     margin-left: 20px;
@@ -19,6 +19,10 @@ body {
 }
 .ham{
     margin-top: -20px;
+}
+.profile-main{
+    margin-bottom: -15px;
+    margin-top: -15px;
 }
 .profile{
     display: flex;
@@ -68,4 +72,15 @@ body {
 }
 .diploma-text-span{
     font-size: 13px !important;
+}
+@media screen and (max-width: 599px) {
+    .header-small{
+        left: 170px !important;
+        width: calc(100% - 156px) !important;
+        background: #000;
+    }
+    .main{
+        margin-left: -148px !important;
+    }
+    
 }
