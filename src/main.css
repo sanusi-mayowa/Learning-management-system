@@ -4,7 +4,7 @@ body {
     height: 100vh;
     background: #E8F1F2;
 }
-.sidebar, .nav-small{
+.sidebar{
     margin-top: 16px;
     margin-bottom: 16px;
     margin-left: 20px;
@@ -73,14 +73,10 @@ body {
 .diploma-text-span{
     font-size: 13px !important;
 }
-@media screen and (max-width: 599px) {
-    .header-small{
-        left: 170px !important;
-        width: calc(100% - 156px) !important;
-        background: #000;
+@media (max-width: 600px) {
+.v-main {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
     }
-    .main{
-        margin-left: -148px !important;
-    }
-    
+
 }

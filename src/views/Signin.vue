@@ -82,7 +82,7 @@ setup() {
     loading.value = true;
     try {
       await login(email.value, password.value);
-      router.push('/dashboard');
+      router.push('/home');
     } catch (error) {
       // Error handling is done in auth.js using SweetAlert2
     } finally {
