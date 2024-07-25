@@ -1,7 +1,7 @@
 <template>
       <v-app-bar
         app
-        class="bg-red px-3 mobilenav"
+        class="bg-primary px-3 mobilenav"
         prominent
         flat
       >
@@ -10,10 +10,10 @@
           <span class="text-btn intro">{{ pageTitle}}</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn>
+        <v-btn variant="plain">
         <img :width="25" src="/src/assets/notification (1) 1.png" alt="">
       </v-btn>
-      <v-btn>
+      <v-btn variant="plain">
         <img :width="25" src="/src/assets/message 1.png" alt="">
       </v-btn>
       </v-app-bar>
@@ -21,18 +21,12 @@
       <v-navigation-drawer
         v-model="drawer"
         temporary
-        class="bg-btn mobilenav"
+        class="bg-btn sidebar-small"
         persistent
       >
       <v-list-item class="d-flex justify-space-between align-center px-0 logo">
         <img :width="100" src="/src/assets/oxfordtrans 1.png" alt="">
         <template v-slot:append>
-          <v-btn
-            variant="text"
-            class="ham"
-          >
-            <img :width="30" src="/src/assets/Group 37962.png" class="pr-1">
-          </v-btn>
         </template>
       </v-list-item>
       <v-list-item>

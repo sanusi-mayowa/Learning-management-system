@@ -47,7 +47,7 @@
       <v-btn flat variant="plain">
         <img :width="25" src="/src/assets/notification (1) 1.png" alt="">
       </v-btn>
-      <v-btn>
+      <v-btn variant="plain">
         <img :width="25" src="/src/assets/message 1.png" alt="">
       </v-btn>
     </v-app-bar>

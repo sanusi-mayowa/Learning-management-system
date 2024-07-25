@@ -24,3 +24,4 @@ export default createVuetify({
     defaultSet: 'mdi',
   },
 });
+
