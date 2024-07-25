@@ -14,18 +14,18 @@
               <small class="small">E173037</small>
             </div>
           </div>
-          <!-- <div class="px-3 d-sm-none" v-bind="activatorProps">
-            <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div>
-          </div> -->
         </template>
   
-        <v-card class="bg-btn">
-            <v-btn>
-            img
-            </v-btn>
+        <v-card class="bg-btn rounded">
+            <div class="d-flex align-center justify-space-between px-5 py-3">
+            <img :width="45" src="/src/assets/Small Logo.png" alt="">
+            </div>
+            <template class="text-center">
+            <img src="/src/assets/28ee4eaeabfe7f9b568b4c73297e14f0.jpeg" alt="">
+            </template>
           <template v-slot:actions>
             <v-btn @click="dialog = false">
-              Agree
+              Back
             </v-btn>
           </template>
         </v-card>
