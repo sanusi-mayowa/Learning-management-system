@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-5 mt-5 px-5 home main">
+    <div class="mx-5 px-5 home main">
         <span class="text-btn text-subtitle-2  font-weight-bold">Welcome Back, Alex</span>
         <div class="mt-3">
             <img class="banner" src="/src/assets/banner1 1.png" alt="">

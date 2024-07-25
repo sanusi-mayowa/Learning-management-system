@@ -10,7 +10,6 @@
         <template v-slot:append>
           <v-btn
             variant="text"
-            @click.stop="toggleRail"
             class="ham"
           >
             <img :width="30" src="/src/assets/Group 37962.png" class="pr-1">

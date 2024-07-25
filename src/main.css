@@ -55,6 +55,9 @@ body {
     min-width: 35px;
     padding-right: 10px;
 } 
+.v-main{
+    padding-top: 90px !important;
+}
 .intro{
     font-weight: 700;
     font-size: 17px;
@@ -99,7 +102,7 @@ body {
     }
     .v-main{
         padding-left: 0 !important;
-        padding-top: 50px !important;
+        padding-top: 60px !important;
     }
     .v-navigation-drawer{
         top: 60px !important;
