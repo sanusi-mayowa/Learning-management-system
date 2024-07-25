@@ -6,7 +6,7 @@
         persistent
       >
         <template v-slot:activator="{ props: activatorProps }">
-            <div class="profile px-3 d-none d-sm-flex" v-bind="activatorProps">
+            <div class="profile px-3 d-flex" v-bind="activatorProps">
             <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div>
             <div v-if="!rail">
               <span>Hi, Alex</span>
@@ -14,9 +14,9 @@
               <small class="small">E173037</small>
             </div>
           </div>
-          <div class="px-3 d-sm-none" v-bind="activatorProps">
+          <!-- <div class="px-3 d-sm-none" v-bind="activatorProps">
             <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div>
-          </div>
+          </div> -->
         </template>
   
         <v-card class="bg-btn">

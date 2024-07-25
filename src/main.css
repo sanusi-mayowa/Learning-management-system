@@ -73,10 +73,13 @@ body {
 .diploma-text-span{
     font-size: 13px !important;
 }
-@media (max-width: 600px) {
+.mobilenav{
+    position: fixed !important;
+}
+/* @media (max-width: 600px) {
 .v-main {
     padding-left: 0 !important;
     padding-top: 0 !important;
     }
 
-}
+} */

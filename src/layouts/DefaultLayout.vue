@@ -1,21 +1,22 @@
 <template>
   <v-app>
-    <Navbar />    
-    <v-main class="bg-primary" style="min-height: 100vh; width: 100vw;">
-      <v-container-fluid>
+    <!-- <NavbarDesktop /> -->
+    <NavbarMobile />
+    <v-main class="bg-primary" style="min-height: 100vh;">
       <router-view></router-view>
-      </v-container-fluid>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
+// import NavbarDesktop from '@/components/NavbarDesktop.vue';
+import NavbarMobile from '@/components/NavbarMobile.vue';
 
 export default {
   name: 'DefaultLayout',
   components: {
-    Navbar,
+    // NavbarDesktop,
+    NavbarMobile
   },
 };
 </script>

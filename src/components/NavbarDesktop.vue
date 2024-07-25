@@ -3,7 +3,7 @@
       v-model="drawer"
       :rail="rail"
       permanent
-      class="bg-btn d-none d-sm-block sidebar" app
+      class="bg-btn sidebar" app
     >
       <v-list-item class="d-flex justify-space-between align-center px-0 logo">
         <img :width="100" src="/src/assets/oxfordtrans 1.png" alt="">
@@ -39,13 +39,12 @@
         </v-list>
       </div>
     </v-navigation-drawer>
-
-    <v-app-bar app flat class="bg-primary pt-5 topbar header-small d-none d-sm-flex">
+    <v-app-bar app flat class="bg-primary pt-5 topbar">
       <v-toolbar-title class="pl-5">
         <span class="text-btn intro">{{ pageTitle }}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat varient="plain">
+      <v-btn flat variant="plain">
         <img :width="25" src="/src/assets/notification (1) 1.png" alt="">
       </v-btn>
       <v-btn>
@@ -56,7 +55,7 @@
 <script>
 import UserProfile from '@/components/UserProfile.vue';
 export default {
-  name: 'Navbar',
+  name: 'NavbarDesktop',
   components: { UserProfile},
   data() {
     return {
