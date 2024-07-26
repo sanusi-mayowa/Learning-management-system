@@ -21,13 +21,17 @@
             <img :width="45" src="/src/assets/Small Logo.png" alt="">
             </div>
             <template class="text-center">
-            <img src="/src/assets/28ee4eaeabfe7f9b568b4c73297e14f0.jpeg" alt="">
+            <img src="/src/assets/user.png" alt="">
             </template>
-          <template v-slot:actions>
+        <!--
+            <template v-slot:actions class="d-block">
             <v-btn @click="dialog = false">
               Back
             </v-btn>
-          </template>
+          </template> -->
+          <div style="position: relative;">
+          <img  src="/src/assets/Rectangle.png" alt="" style="position: absolute;">
+          </div>
         </v-card>
       </v-dialog>
     </div>

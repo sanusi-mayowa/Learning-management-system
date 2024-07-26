@@ -85,6 +85,10 @@ body {
 .desktop{
     display: block !important;
 }
+.course:last-child{
+    margin-left: 20px !important;
+    background: #000 !important;
+}
 @media screen and (max-width: 600px) {
     .sidebar-small{
         position: fixed !important;
