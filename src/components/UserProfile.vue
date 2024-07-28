@@ -18,7 +18,7 @@
   
         <v-card class="bg-btn rounded">
             <div class="d-flex align-center justify-space-between px-5 py-3">
-            <!-- <img :width="45" src="/src/assets/Small Logo.png" alt=""> -->
+            <img :width="45" src="/assets/Small Logo.png" alt="">
             </div>
             <template class="text-center">
             <!-- <img src="/src/assets/user.png" alt=""> -->
