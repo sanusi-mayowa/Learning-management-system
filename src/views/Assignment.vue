@@ -19,27 +19,76 @@
       <v-tabs-window-item
         :value="1"
       >
-        <v-container fluid v-for="semester in semesters1" :key="semester" :class="`${semester.status}`" >
-          <v-row>
-            <v-col cols="12" md="3" class="module py-5">
-                <div>{{semester.module}}</div>
-            </v-col>
-            <v-col cols="12" md="3" class="py-5">
-                <div>{{ semester.course }}</div>
-            </v-col>
-            <v-col cols="12" md="3" class="py-5 unit">
-                <div>{{ semester.unit }}</div>
-            </v-col>
-            <v-col class="status py-5" cols="12" md="3">
-                <div>
-                    <v-chip :class="`${semester.status}`">{{semester.status}}</v-chip>
-                </div>
-            </v-col>
-            <v-divider></v-divider>
-          </v-row>
-        </v-container>
+      <v-container fluid>
+  <!-- Header Row for Larger Screens -->
+  <v-row class="d-none d-md-flex assignment-row pb-1">
+    <v-col cols="12" md="3" class="py-5">
+      <div>Unit</div>
+    </v-col>
+    <v-col cols="12" md="3" class="py-5">
+      <div>Subject</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <div>Issued Date</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <div>Deadline</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <div>Status</div>
+    </v-col>
+    <v-divider class="d-none d-md-flex"></v-divider>
+  </v-row>
+
+  <!-- Assignment Rows -->
+  <v-row v-for="assignment in assignment1" :key="assignment.id" class=" pt-3">
+    <v-col cols="12" md="3" class="py-5">
+      <!-- Header for Smaller Screens -->
+      <div class="d-flex d-md-none assignment-row"><div>Unit</div></div>
+      <div>{{ assignment.unit }}</div>
+    </v-col>
+    <v-col cols="12" md="3" class="py-5">
+      <!-- Header for Smaller Screens -->
+      <div class="d-flex d-md-none assignment-row"><div>Subject</div></div>
+      <div>{{ assignment.subject }}</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <!-- Header for Smaller Screens -->
+      <div class="d-flex d-md-none assignment-row"><div>Issued Date</div></div>
+      <div>{{ assignment.issues_date }}</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <!-- Header for Smaller Screens -->
+      <div class="d-flex d-md-none assignment-row"><div>Deadline</div></div>
+      <div>{{ assignment.deadline }}</div>
+    </v-col>
+    <v-col cols="12" md="2" class="py-5">
+      <!-- Header for Smaller Screens -->
+      <div class="d-flex d-md-none assignment-row"><div>Status</div></div>
+      <div>
+        <v-chip :class="assignment.status">{{ assignment.status }}</v-chip>
+      </div>
+    </v-col>
+    <v-divider></v-divider>
+  </v-row>
+</v-container>
+
       </v-tabs-window-item>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
       <v-tabs-window-item
       :value="2">
       <v-container fluid v-for="semester in semesters2" :key="semester" :class="`${semester.status}`">
@@ -107,7 +156,7 @@
             <v-divider></v-divider>
           </v-row>
         </v-container>
-      </v-tabs-window-item>
+      </v-tabs-window-item> -->
     </v-tabs-window>
   </v-card>
   

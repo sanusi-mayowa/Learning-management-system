@@ -127,6 +127,11 @@ body {
     display: flex;
     justify-content: center;
 }
+.assignment-row div{
+    color: #8A92A6 !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
 @media screen and (max-width: 959px) {
     .status , .unit{
         display: block;
