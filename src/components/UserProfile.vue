@@ -7,7 +7,7 @@
       >
         <template v-slot:activator="{ props: activatorProps }">
             <div class="profile px-3 d-flex" v-bind="activatorProps">
-            <!-- <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div> -->
+            <div><img :width="35" src="/assets/profile 1.png" alt=""></div>
             <div v-if="!rail">
               <span>Hi, Alex</span>
               <br>

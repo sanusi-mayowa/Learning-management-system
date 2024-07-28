@@ -11,10 +11,10 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn variant="plain">
-        <img :width="25" src="/public/assets/notification (1) 1.png" alt="">
+        <img :width="25" src="/assets/notification (1) 1.png" alt="">
       </v-btn>
       <v-btn variant="plain">
-        <img :width="25" src="/public/assets/message 1.png" alt="">
+        <img :width="25" src="/assets/message 1.png" alt="">
       </v-btn>
       </v-app-bar>
 
