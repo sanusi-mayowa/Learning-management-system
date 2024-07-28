@@ -23,12 +23,12 @@
             <template class="text-center">
             <!-- <img src="/src/assets/user.png" alt=""> -->
             </template>
-        <!--
-            <template v-slot:actions class="d-block">
+        
+            <template v-slot:actions>
             <v-btn @click="dialog = false">
               Back
             </v-btn>
-          </template> -->
+          </template>
           <div style="position: relative;">
           <!-- <img  src="/src/assets/Rectangle.png" alt="" style="position: absolute;"> -->
           </div>
