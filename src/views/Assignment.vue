@@ -1,6 +1,6 @@
 <template>
     <div class="mx-5 px-5 courses main">
-        <div class="mt-5 pt-5 px-5 mx-5 nav-tabs-main">
+        <div class="my-5 py-3 px-5 mx-5 nav-tabs-main">
             <v-tabs
             v-model="tab"
             color="amber-accent-4"
@@ -126,29 +126,33 @@ export default{
             { avatar: '/assets/icons8-assignment-50 1.png', text: 'Diploma in Computing', text2: 'oxf/hnd/01' },
           ],
           tab: null,
-          semesters1: [
-            { module: 'Module 01', course: 'Programming', unit: 'Unit 1', status: 'Completed'},
-            { module: 'Module 02', course: 'Networking', unit: 'Unit 1', status: 'Ongoing'},
-            { module: 'Module 03', course: 'Database', unit: 'Unit 1', status: 'Pending'},
-            { module: 'Module 04', course: 'Professional Practice', unit: 'Unit 1', status: 'Pending'},
+          assignment1: [
+            { unit: '03', subject: 'CRP', issues_date: '03/02/2023', deadline: '03/05/2023', status: 'Submitted'},
+            { unit: '01', subject: 'Programming', issues_date: '03/09/2023', deadline: '03/09/2025', status: 'Pending'},
+            { unit: '01', subject: 'Database', issues_date: '03/02/2024', deadline: '03/10/2026', status: 'Pending'},
+            { unit: '01', subject: 'Networking', issues_date: '02/05/2022', deadline: '03/11/2023', status: 'Pending'},
+            { unit: '02', subject: 'Security', issues_date: '02/08/2022', deadline: '03/10/2023', status: 'Late Submission'},
           ],
-          semesters2: [
-            { module: 'Module 05', course: 'Programming', unit: 'Unit 2', status: 'Completed'},
-            { module: 'Module 06', course: 'Networking', unit: 'Unit 2', status: 'Ongoing'},
-            { module: 'Module 07', course: 'Database', unit: 'Unit 2', status: 'Pending'},
-            { module: 'Module 08', course: 'Professional Practice', unit: 'Unit 2', status: 'Pending'},
+          assignment2: [
+            { unit: '03', subject: 'CRP', issues_date: '03/02/2023', deadline: '03/05/2023', status: 'Submitted'},
+            { unit: '01', subject: 'Programming', issues_date: '03/09/2023', deadline: '03/09/2025', status: 'Pending'},
+            { unit: '01', subject: 'Database', issues_date: '03/02/2024', deadline: '03/10/2026', status: 'Pending'},
+            { unit: '01', subject: 'Networking', issues_date: '02/05/2022', deadline: '03/11/2023', status: 'Pending'},
+            { unit: '02', subject: 'Security', issues_date: '02/08/2022', deadline: '03/10/2023', status: 'Late Submission'},
           ],
-          semesters3: [
-            { module: 'Module 09', course: 'Programming', unit: 'Unit 3', status: 'Completed'},
-            { module: 'Module 10', course: 'Networking', unit: 'Unit 3', status: 'Ongoing'},
-            { module: 'Module 11', course: 'Database', unit: 'Unit 3', status: 'Pending'},
-            { module: 'Module 12', course: 'Professional Practice', unit: 'Unit 3', status: 'Pending'},
+          assignment3: [
+            { unit: '03', subject: 'CRP', issues_date: '03/02/2023', deadline: '03/05/2023', status: 'Submitted'},
+            { unit: '01', subject: 'Programming', issues_date: '03/09/2023', deadline: '03/09/2025', status: 'Pending'},
+            { unit: '01', subject: 'Database', issues_date: '03/02/2024', deadline: '03/10/2026', status: 'Pending'},
+            { unit: '01', subject: 'Networking', issues_date: '02/05/2022', deadline: '03/11/2023', status: 'Pending'},
+            { unit: '02', subject: 'Security', issues_date: '02/08/2022', deadline: '03/10/2023', status: 'Late Submission'},
           ],
-          semesters4: [
-            { module: 'Module 13', course: 'Programming', unit: 'Unit 4', status: 'Completed'},
-            { module: 'Module 14', course: 'Networking', unit: 'Unit 4', status: 'Ongoing'},
-            { module: 'Module 15', course: 'Database', unit: 'Unit 4', status: 'Pending'},
-            { module: 'Module 16', course: 'Professional Practice', unit: 'Unit 4', status: 'Pending'},
+          assignment4: [
+            { unit: '03', subject: 'CRP', issues_date: '03/02/2023', deadline: '03/05/2023', status: 'Submitted'},
+            { unit: '01', subject: 'Programming', issues_date: '03/09/2023', deadline: '03/09/2025', status: 'Pending'},
+            { unit: '01', subject: 'Database', issues_date: '03/02/2024', deadline: '03/10/2026', status: 'Pending'},
+            { unit: '01', subject: 'Networking', issues_date: '02/05/2022', deadline: '03/11/2023', status: 'Pending'},
+            { unit: '02', subject: 'Security', issues_date: '02/08/2022', deadline: '03/10/2023', status: 'Late Submission'},
           ],
         }
     }
