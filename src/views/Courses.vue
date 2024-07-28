@@ -40,7 +40,7 @@
             <v-col cols="12" md="3" class="py-5">
                 <div>{{ semester.course }}</div>
             </v-col>
-            <v-col cols="12" md="3" class="py-5">
+            <v-col cols="12" md="3" class="py-5 unit">
                 <div>{{ semester.unit }}</div>
             </v-col>
             <v-col class="status py-5" cols="12" md="3">
@@ -63,7 +63,7 @@
             <v-col cols="12" md="3" class="py-5">
                 <div>{{ semester.course }}</div>
             </v-col>
-            <v-col cols="12" md="3" class="py-5">
+            <v-col cols="12" md="3" class="py-5 unit">
                 <div>{{ semester.unit }}</div>
             </v-col>
             <v-col class="status py-5" cols="12" md="3">
@@ -86,7 +86,7 @@
             <v-col cols="12" md="3" class="py-5">
                 <div>{{ semester.course }}</div>
             </v-col>
-            <v-col cols="12" md="3" class="py-5">
+            <v-col cols="12" md="3" class="py-5 unit">
                 <div>{{ semester.unit }}</div>
             </v-col>
             <v-col class="status py-5" cols="12" md="3">
@@ -109,7 +109,7 @@
             <v-col cols="12" md="3" class="py-5">
                 <div>{{ semester.course }}</div>
             </v-col>
-            <v-col cols="12" md="3" class="py-5">
+            <v-col cols="12" md="3" class="py-5 unit">
                 <div>{{ semester.unit }}</div>
             </v-col>
             <v-col class="status py-5" cols="12" md="3">
@@ -134,9 +134,9 @@ export default{
     data(){
         return{
             diplomas: [
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in English', text2: 'oxf/eng/01' },
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in IT', text2: 'oxf/dit/01'},
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in Computing', text2: 'oxf/hnd/01' },
+            { avatar: '/assets/icons8-assignment-50 1.png', text: 'Diploma in English', text2: 'oxf/eng/01' },
+            { avatar: '/assets/icons8-assignment-50 1.png', text: 'Diploma in IT', text2: 'oxf/dit/01'},
+            { avatar: '/assets/icons8-assignment-50 1.png', text: 'Diploma in Computing', text2: 'oxf/hnd/01' },
           ],
           tab: null,
           semesters1: [

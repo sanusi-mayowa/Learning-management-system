@@ -1,4 +1,4 @@
-<template class="bg-red">
+<template>
     <div class="text-center pa-4">
       <v-dialog
         v-model="dialog"
@@ -7,7 +7,7 @@
       >
         <template v-slot:activator="{ props: activatorProps }">
             <div class="profile px-3 d-flex" v-bind="activatorProps">
-            <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div>
+            <!-- <div><img :width="35" src="/src/assets/profile 1.png" alt=""></div> -->
             <div v-if="!rail">
               <span>Hi, Alex</span>
               <br>
@@ -18,10 +18,10 @@
   
         <v-card class="bg-btn rounded">
             <div class="d-flex align-center justify-space-between px-5 py-3">
-            <img :width="45" src="/src/assets/Small Logo.png" alt="">
+            <!-- <img :width="45" src="/src/assets/Small Logo.png" alt=""> -->
             </div>
             <template class="text-center">
-            <img src="/src/assets/user.png" alt="">
+            <!-- <img src="/src/assets/user.png" alt=""> -->
             </template>
         <!--
             <template v-slot:actions class="d-block">
@@ -30,7 +30,7 @@
             </v-btn>
           </template> -->
           <div style="position: relative;">
-          <img  src="/src/assets/Rectangle.png" alt="" style="position: absolute;">
+          <!-- <img  src="/src/assets/Rectangle.png" alt="" style="position: absolute;"> -->
           </div>
         </v-card>
       </v-dialog>

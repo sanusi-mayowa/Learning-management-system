@@ -2,7 +2,7 @@
     <div class="mx-5 px-5 home main">
         <span class="text-btn text-subtitle-2  font-weight-bold">Welcome Back, Alex</span>
         <div class="mt-3">
-            <img class="banner" src="/src/assets/banner1 1.png" alt="">
+            <img class="banner" src="/assets/banner1 1.png" alt="">
         </div>
         <v-row class="mt-2">
             <v-col cols="12" md="3" class="mr-5" v-for="diploma in diplomas" :key="diploma.id">
@@ -36,9 +36,9 @@ export default{
     data(){
         return{
             diplomas: [
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in English', text2: 'oxf/eng/01' },
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in IT', text2: 'oxf/dit/01'},
-            { avatar: '/src/assets/icons8-assignment-50 1.png', text: 'Diploma in Computing', text2: 'oxf/hnd/01' },
+            { avatar: '/assets/icons8-assignment-50 1.png', text: 'Diploma in English', text2: 'oxf/eng/01' },
+            { avatar: 'assets/icons8-assignment-50 1.png', text: 'Diploma in IT', text2: 'oxf/dit/01'},
+            { avatar: 'assets/icons8-assignment-50 1.png', text: 'Diploma in Computing', text2: 'oxf/hnd/01' },
           ],
           progresses :[
             { text: 'Module Progress :', status: '90%'},

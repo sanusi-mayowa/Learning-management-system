@@ -119,6 +119,19 @@ body {
 .v-chip.Pending{
     background: tomato;
 }
+.status{
+    display: flex;
+    justify-content: end;
+}
+.unit{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 959px) {
+    .status , .unit{
+        display: block;
+    }
+}
 @media screen and (max-width: 600px) {
     .sidebar-small{
         position: fixed !important;

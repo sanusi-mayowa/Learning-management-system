@@ -7,7 +7,7 @@
           <v-card-text>
             <div class="d-flex justify-center">
               <div>
-                  <v-img :width="200" src="/src/assets/oxfordtrans 1.png" contain></v-img>
+                  <v-img :width="200" src="/assets/oxfordtrans 1.png" contain></v-img>
                   <div class="text-label text-dark text-center mb-5">Forgot Password</div>
                 </div>
               </div>

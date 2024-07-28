@@ -11,10 +11,10 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn variant="plain">
-        <img :width="25" src="/src/assets/notification (1) 1.png" alt="">
+        <img :width="25" src="/public/assets/notification (1) 1.png" alt="">
       </v-btn>
       <v-btn variant="plain">
-        <img :width="25" src="/src/assets/message 1.png" alt="">
+        <img :width="25" src="/public/assets/message 1.png" alt="">
       </v-btn>
       </v-app-bar>
 
@@ -25,7 +25,7 @@
         persistent
       >
       <v-list-item class="d-flex justify-space-between align-center px-0 logo">
-        <img :width="100" src="/src/assets/oxfordtrans 1.png" alt="">
+        <img :width="100" src="/assets/oxfordtrans 1.png" alt="">
         <template v-slot:append>
         </template>
       </v-list-item>
@@ -61,12 +61,12 @@ export default {
       drawer: false,
       group: null,
       links: [
-        { avatar: '/src/assets/home 2.png', text: 'Home', route: '/home' },
-        { avatar: '/src/assets/online-learning 1.png', text: 'My Courses', route: '/courses' },
-        { avatar: '/src/assets/paper 2.png', text: 'Assignments', route: '/assignments' },
-        { avatar: '/src/assets/schedule 1.png', text: 'Time Table', route: '/timetable' },
-        { avatar: '/src/assets/chat 1.png', text: 'Forum', route: '/forum' },
-        { avatar: '/src/assets/setting 1.png', text: 'Settings', route: '/settings' },
+        { avatar: '/assets/home 2.png', text: 'Home', route: '/home' },
+        { avatar: '/assets/online-learning 1.png', text: 'My Courses', route: '/courses' },
+        { avatar: '/assets/paper 2.png', text: 'Assignments', route: '/assignments' },
+        { avatar: '/assets/schedule 1.png', text: 'Time Table', route: '/timetable' },
+        { avatar: '/assets/chat 1.png', text: 'Forum', route: '/forum' },
+        { avatar: '/assets/setting 1.png', text: 'Settings', route: '/settings' },
       ]
   };
     },
