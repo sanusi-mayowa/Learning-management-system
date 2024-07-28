@@ -1,13 +1,13 @@
 // Plugins
-import Components from 'unplugin-vue-components/vite'
-import Vue from '@vitejs/plugin-vue'
-import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import ViteFonts from 'unplugin-fonts/vite'
-import VueRouter from 'unplugin-vue-router/vite'
+import Components from 'unplugin-vue-components/vite';
+import Vue from '@vitejs/plugin-vue';
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+import ViteFonts from 'unplugin-fonts/vite';
+import VueRouter from 'unplugin-vue-router/vite';
 
 // Utilities
-import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +16,6 @@ export default defineConfig({
     Vue({
       template: { transformAssetUrls }
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
       styles: {
@@ -51,4 +50,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-})
+  build: {
+    outDir: 'dist'
+  }
+});
