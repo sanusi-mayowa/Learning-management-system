@@ -43,23 +43,13 @@
         <span class="text-btn intro">{{ pageTitle }}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat variant="plain" @click="notification =!notification">
+      <v-btn flat variant="plain">
         <img :width="25" src="/assets/notification (1) 1.png" alt="">
       </v-btn>
       <v-btn variant="plain">
         <img :width="25" src="/assets/message 1.png" alt="">
       </v-btn>
     </v-app-bar>
-    <v-navigation-drawer v-model="notification" app location="right" temporary>
-      <v-list>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
 </template>
 <script>
 import UserProfile from '@/components/UserProfile.vue';
@@ -69,7 +59,6 @@ export default {
   data() {
     return {
       drawer: true,
-      notification: false,
       rail: false,
       links: [
         { avatar: '/assets/home 2.png', text: 'Home', route: '/home' },
@@ -93,11 +82,3 @@ export default {
   }
 };
 </script>
-<style>
-.v-navigation-drawer__scrim {
-  background: none !important;
-}
-.v-navigation-drawer--temporary.v-navigation-drawer--active{
-  box-shadow: none !important;
-}
-</style>
