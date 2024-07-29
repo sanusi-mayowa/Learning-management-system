@@ -98,22 +98,22 @@ body {
 .module, .status{
     font-weight: 500;
 }
-.v-container.Completed{
+.v-container.Completed, .v-row.Submitted{
     border-left: 4px solid #3cd1c2 !important;
 }
-.v-container.Ongoing{
+.v-container.Ongoing, .v-row.Pending{
     border-left: 4px solid orange !important;
 }
-.v-container.Pending{
+.v-container.Pending, .v-row.Late {
     border-left: 4px solid tomato !important;
 }
-.v-row{
+.courses-row{
     margin: -16px !important;
 }
-.v-chip.Completed{
+.v-chip.Completed, .v-chip.Submitted{
     background: #3cd1c2;
 }
-.v-chip.Ongoing{
+.v-chip.Ongoing , .v-chip.v-chip.Pending{
     background: orange;
 }
 .v-chip.Pending{
@@ -131,6 +131,10 @@ body {
     color: #8A92A6 !important;
     font-weight: 400 !important;
     font-size: 15px !important;
+}
+.assignment.v-row{
+    margin-top: 8px;
+    margin-left: -16px;
 }
 @media screen and (max-width: 959px) {
     .status , .unit{

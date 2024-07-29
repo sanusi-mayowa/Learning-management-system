@@ -33,7 +33,7 @@
         :value="1"
       >
         <v-container fluid v-for="semester in semesters1" :key="semester" :class="`${semester.status}`" >
-          <v-row>
+          <v-row class="courses-row">
             <v-col cols="12" md="3" class="module py-5">
                 <div>{{semester.module}}</div>
             </v-col>
@@ -56,7 +56,7 @@
       <v-tabs-window-item
       :value="2">
       <v-container fluid v-for="semester in semesters2" :key="semester" :class="`${semester.status}`">
-          <v-row>
+          <v-row class="courses-row">
             <v-col cols="12" md="3" class="module py-5">
                 <div>{{semester.module}}</div>
             </v-col>
@@ -79,7 +79,7 @@
       <v-tabs-window-item
       :value="3">
       <v-container fluid v-for="semester in semesters3" :key="semester" :class="`${semester.status}`">
-          <v-row>
+          <v-row class="courses-row">
             <v-col cols="12" md="3" class="module py-5">
                 <div>{{semester.module}}</div>
             </v-col>
@@ -102,7 +102,7 @@
       <v-tabs-window-item
       :value="4">
       <v-container fluid v-for="semester in semesters4" :key="semester" :class="`${semester.status}`">
-          <v-row>
+          <v-row class="courses-row">
             <v-col cols="12" md="3" class="module py-5">
                 <div>{{semester.module}}</div>
             </v-col>
