@@ -10,6 +10,8 @@ import Courses from '@/views/Courses.vue';
 import Assignment from '@/views/Assignment.vue';
 import TimeTable from '@/views/TimeTable.vue';
 
+import Settings from '@/views/Settings.vue';
+
 const routes = [
   {
     path: '/',
@@ -94,6 +96,18 @@ const routes = [
         meta: { title: 'Time Table' }
       },
     ],
+  },
+  {
+    path: '/settings',
+    component: DefaultLayout,
+    children:[
+      {
+        path: '',
+        name: 'Settings',
+        component: Settings,
+        meta: {title: 'Settings'}
+      }
+    ]
   }
 ];
 
