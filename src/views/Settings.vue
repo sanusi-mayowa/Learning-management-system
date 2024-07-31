@@ -27,9 +27,9 @@ export default{
                 { icon: '/assets/password.png', text: 'Change Password', backward:'/assets/Backward.png'},
                 { icon: '/assets/security.png', text: 'Security', backward:'/assets/Backward.png'},
                 { icon: '/assets/friends.png', text: 'Friends', backward:'/assets/Backward.png'},
-                { icon: '/assets/home 2.png', text: 'Enable Two Step Verification  ', backward:'/assets/Backward.png'},
-                { icon: '/assets/home 2.png', text: 'Display and languages', backward:'/assets/Backward.png'},
-                { icon: '/assets/home 2.png', text: 'Help', backward:'/assets/Backward.png'},
+                { icon: '/assets/notifications.png', text: 'Enable Two Step Verification  ', backward:'/assets/Backward.png'},
+                { icon: '/assets/smile.png', text: 'Display and languages', backward:'/assets/Backward.png'},
+                { icon: '/assets/search.png', text: 'Help', backward:'/assets/Backward.png'},
             ]
         }
     }
