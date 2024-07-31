@@ -42,12 +42,3 @@ export default{
     }
 }
 </script>
-
-<style>
-.menu{
-    cursor: pointer;
-}
-.menu:hover{
-    background: #000 !important;
-}
-</style>
