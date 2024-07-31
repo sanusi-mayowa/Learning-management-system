@@ -3,44 +3,11 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
-                    <div class="mx-2 my-2">
-                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
-                    <div>
-                        <p><span></span>Notifications</p>
-                    </div>
-                    <div>
-                        hhhh
-                    </div>
-                </div>
-                <!-- =================== -->
-                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
-                    <div>
-                        <p><span></span>Change Password</p>
-                    </div>
-                    <div>
-                        hhhh
-                    </div>
-                </div>
-                <!-- =================== -->
-                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
-                    <div>
-                        <p><span></span>Security</p>
-                    </div>
-                    <div>
-                        hhhh
-                    </div>
-                </div>
-                <!-- =================== -->
-                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
-                    <div>
-                        <p><span></span>Friends</p>
-                    </div>
-                    <div>
-                        hhhh
-                    </div>
-                </div>
-                <!-- =================== -->
-                </div>
+                    <v-row class="mx-2 my-2" v-for="setting in settings" :key="setting.id">
+                        <v-col cols="8">
+                            <p>{{ setting.text }}</p>
+                        </v-col>
+                    </v-row>
                 </v-card>
             </v-col>
         </v-row>
@@ -51,7 +18,9 @@ export default{
     name: 'Settings',
     data(){
         return{
-
+            settings:[
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'}
+            ]
         }
     }
 }
