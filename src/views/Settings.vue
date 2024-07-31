@@ -7,7 +7,7 @@
                         <v-col cols="8">
                             <p>{{ setting.text }}</p>
                         </v-col>
-                        <v-col>
+                        <v-col end>
                             <img :src="setting.backward" alt="">
                         </v-col>
                     </v-row>
