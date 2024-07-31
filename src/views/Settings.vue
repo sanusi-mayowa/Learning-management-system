@@ -4,10 +4,10 @@
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
                     <v-row class="mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
-                        <v-col cols="8">
+                        <v-col cols="10">
                             <p>{{ setting.text }}</p>
                         </v-col>
-                        <v-col end>
+                        <v-col cols="2" end>
                             <img :src="setting.backward" alt="">
                         </v-col>
                     </v-row>
