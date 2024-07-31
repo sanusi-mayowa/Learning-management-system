@@ -3,7 +3,7 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
-                    <div class="px-2 py-2 menu">
+                    <div class="mx-2 my-2 menu">
                 <div class="d-flex justify-space-between bg-red px-1 py-1">
                     <div>
                         gggg
