@@ -2,7 +2,7 @@
     <div class="mx-5 px-5 mt-2 settings main">
         <v-row>
             <v-col col="12" md="5">
-                <v-card flat class="bg-purple">
+                <v-card flat>
                     <div class="d-flex justify-space-between align-center px-2 py-2 mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
                         <div>
                             <p>{{ setting.text }}</p>
