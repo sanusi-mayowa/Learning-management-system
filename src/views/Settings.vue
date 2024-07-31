@@ -16,7 +16,7 @@
                 <div class="d-flex justify-space-between mt-3">
                     <div></div>
                 <v-btn flat class="bg-primary">
-                    <i class="bi bi-box-arrow-left" start></i>
+                    <i class="bi bi-box-arrow-left mr-2"></i>
                     Logout
                 </v-btn>
             </div>
