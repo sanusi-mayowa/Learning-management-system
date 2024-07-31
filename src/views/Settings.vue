@@ -8,7 +8,7 @@
                             <p>{{ setting.text }}</p>
                         </div>
                         <div>
-                            <img :src="setting.backward" alt="">
+                            <img :width="20" :src="setting.backward" alt="">
                         </div>
                     </div>
                 </v-card>
