@@ -34,6 +34,6 @@ export default{
     cursor: pointer;
 }
 .menu:hover{
-    background: #000;
+    background: #000 !important;
 }
 </style>
