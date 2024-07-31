@@ -3,7 +3,7 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
-                    <div class="d-flex justify-space-between mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
+                    <div class="d-flex justify-space-between px-2 py-2 mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
                         <div>
                             <p>{{ setting.text }}</p>
                         </div>
