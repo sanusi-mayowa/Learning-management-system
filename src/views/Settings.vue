@@ -3,14 +3,14 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
-                    <v-row class="mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
-                        <v-col cols="10">
+                    <div class="d-flex justify-space-between mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
+                        <div cols="10">
                             <p>{{ setting.text }}</p>
-                        </v-col>
-                        <v-col cols="2" end>
+                        </div>
+                        <div cols="2" end>
                             <img :src="setting.backward" alt="">
-                        </v-col>
-                    </v-row>
+                        </div>
+                    </div>
                 </v-card>
             </v-col>
         </v-row>
