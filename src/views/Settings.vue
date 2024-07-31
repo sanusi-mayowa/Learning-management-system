@@ -9,7 +9,7 @@
                             <p class="ml-2" style="font-size: 13px; font-weight: 500;">{{ setting.text }}</p>
                         </div>
                         <div>
-                            <img :width="10" :src="setting.backward" alt="">
+                            <img :width="8" :src="setting.backward" alt="">
                         </div>
                     </div>
                 </v-card>
