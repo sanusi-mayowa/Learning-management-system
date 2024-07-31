@@ -189,4 +189,7 @@ export default{
     margin-right: -10px !important;
 }
 }
+.v-chip.Pending{
+    background: tomato;
+}
 </style>
