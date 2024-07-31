@@ -6,12 +6,40 @@
                     <div class="mx-2 my-2">
                 <div class="d-flex justify-space-between menu bg-red px-1 py-1">
                     <div>
-                        gggg
+                        <p><span></span>Notifications</p>
                     </div>
                     <div>
                         hhhh
                     </div>
                 </div>
+                <!-- =================== -->
+                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
+                    <div>
+                        <p><span></span>Change Password</p>
+                    </div>
+                    <div>
+                        hhhh
+                    </div>
+                </div>
+                <!-- =================== -->
+                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
+                    <div>
+                        <p><span></span>Security</p>
+                    </div>
+                    <div>
+                        hhhh
+                    </div>
+                </div>
+                <!-- =================== -->
+                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
+                    <div>
+                        <p><span></span>Friends</p>
+                    </div>
+                    <div>
+                        hhhh
+                    </div>
+                </div>
+                <!-- =================== -->
                 </div>
                 </v-card>
             </v-col>
