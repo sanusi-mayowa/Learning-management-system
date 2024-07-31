@@ -7,6 +7,9 @@
                         <v-col cols="8">
                             <p>{{ setting.text }}</p>
                         </v-col>
+                        <v-col>
+                            <img :src="setting.backward" alt="">
+                        </v-col>
                     </v-row>
                 </v-card>
             </v-col>
@@ -19,7 +22,12 @@ export default{
     data(){
         return{
             settings:[
-                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'}
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
+                { icon: '/assets/home 2.png', text: 'Notifications', backward:'/assets/Backward.png'},
             ]
         }
     }
