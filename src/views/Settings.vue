@@ -3,7 +3,7 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat>
-                    ;<div class="d-flex justify-space-between align-center px-2 py-2 mx-2 my-2" v-for="setting in settings" :key="setting.id" style="cursor: pointer;">
+                    <div class="d-flex justify-space-between align-center px-2 py-2 mx-2 my-2" v-for="setting in settings" :key="setting.id" style="cursor: pointer;">
                         <div>
                             <p>{{ setting.text }}</p>
                         </div>
