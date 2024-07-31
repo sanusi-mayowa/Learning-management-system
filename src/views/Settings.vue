@@ -13,9 +13,9 @@
                         </div>
                     </div>
                 </v-card>
-                <div class="d-flex justify-space-between">
+                <div class="d-flex justify-space-between mt-2">
                     <div></div>
-                <v-btn flat>
+                <v-btn flat class="bg-primary">
                     <i class="bi bi-box-arrow-left"></i>
                     Logout
                 </v-btn>
