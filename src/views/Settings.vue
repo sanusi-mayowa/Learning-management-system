@@ -13,10 +13,13 @@
                         </div>
                     </div>
                 </v-card>
-                <v-btn>
+                <div class="d-flex justify-space-between">
+                    <div></div>
+                <v-btn flat>
                     <i class="bi bi-box-arrow-left"></i>
                     Logout
                 </v-btn>
+            </div>
             </v-col>
         </v-row>
     </div>
