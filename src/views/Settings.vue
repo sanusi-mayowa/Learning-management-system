@@ -6,7 +6,7 @@
                     <div class="d-flex justify-space-between align-center px-2 py-2 mx-2 my-2" v-for="setting in settings" :key="setting.id" style="cursor: pointer;">
                         <div class="d-flex align-center">
                             <img :width="20" :src="setting.icon" alt="">
-                            <p class="ml-2">{{ setting.text }}</p>
+                            <p class="ml-2" style="font-size: 15px">{{ setting.text }}</p>
                         </div>
                         <div>
                             <img :width="10" :src="setting.backward" alt="">
