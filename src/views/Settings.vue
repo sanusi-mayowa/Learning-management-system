@@ -13,6 +13,10 @@
                         </div>
                     </div>
                 </v-card>
+                <v-btn>
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </v-btn>
             </v-col>
         </v-row>
     </div>
