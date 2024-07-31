@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-5 px-5 settings main">
+    <div class="mx-5 px-5 mt-2 settings main">
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
