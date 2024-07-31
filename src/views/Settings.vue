@@ -4,10 +4,10 @@
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
                     <div class="d-flex justify-space-between mx-2 my-2 bg-red" v-for="setting in settings" :key="setting.id">
-                        <div cols="10">
+                        <div>
                             <p>{{ setting.text }}</p>
                         </div>
-                        <div cols="2" end>
+                        <div>
                             <img :src="setting.backward" alt="">
                         </div>
                     </div>
