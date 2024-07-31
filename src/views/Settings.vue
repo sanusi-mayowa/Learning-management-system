@@ -15,7 +15,7 @@
                 </v-card>
                 <div class="d-flex justify-space-between mt-3">
                     <div></div>
-                <v-btn flat class="bg-primary">
+                <v-btn flat class="bg-primary" :to="{ path: '/' }">
                     <i class="bi bi-box-arrow-left mr-2"></i>
                     Logout
                 </v-btn>
