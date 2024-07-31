@@ -3,8 +3,8 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat class="bg-purple">
-                    <div class="mx-2 my-2 menu">
-                <div class="d-flex justify-space-between bg-red px-1 py-1">
+                    <div class="mx-2 my-2">
+                <div class="d-flex justify-space-between menu bg-red px-1 py-1">
                     <div>
                         gggg
                     </div>
