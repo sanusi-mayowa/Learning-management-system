@@ -1,5 +1,21 @@
 <template>
     <div class="mx-5 px-5 settings main">
+        <v-row>
+            <v-col col="12" md="5">
+                <v-card flat class="bg-purple">
+                    <div class="px-2 py-2 menu">
+                <div class="d-flex justify-space-between bg-red px-1 py-1">
+                    <div>
+                        gggg
+                    </div>
+                    <div>
+                        hhhh
+                    </div>
+                </div>
+                </div>
+                </v-card>
+            </v-col>
+        </v-row>
     </div>
 </template>
 <script>
@@ -12,3 +28,12 @@ export default{
     }
 }
 </script>
+
+<style>
+.menu{
+    cursor: pointer;
+}
+.menu:hover{
+    background: #000;
+}
+</style>
