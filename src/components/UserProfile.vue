@@ -16,21 +16,34 @@
           </div>
         </template>
   
-        <v-card class="bg-btn rounded">
-            <div class="d-flex align-center justify-space-between px-5 py-3">
+        <v-card class="bg-user rounded user-info">
+            <div class="d-flex align-center justify-space-between px-5 py-2">
             <img :width="45" src="/assets/Small Logo.png" alt="">
             </div>
-            <template class="text-center">
-            <!-- <img src="/src/assets/user.png" alt=""> -->
-            </template>
+            <div class="text-center" style="position: relative;">
+              <img :width="200" src="/assets/user.png" alt="user profile">
+              <img :width="166" src="/assets/Ellipse.png" alt="" style="position: absolute; right: 32%; bottom: -1.5px;">
+            </div>
+            <div class="text-center mt-3">
+              <p class="text-h5 mb-1">Alex</p>
+              <span class="text-grey">HND in  Computing </span>
+              <p class="py-3 px-5 mx-5" style="font-size: 13px;">A kiddo who uses <span class="text-comment"> Bootstrap</span> and <span class="text-comment"> Laravel</span> in web development. Currently playing around with design via Figma</p>
+              <div>
+                <v-btn flat class="bg-email" style="font-size: 12px;">joeylenerivera@gmail.com</v-btn>
+              </div>
+              <ul class="d-flex align-center justify-center" v-for="social in socials" :key="social.id">
+                <li><a href="http://" target="_blank"></a></li>
+              </ul>
+            </div>
+            
         
             <template v-slot:actions>
-            <v-btn @click="dialog = false">
+            <v-btn @click="dialog = false" class="mb-5 mr-5">
               Back
             </v-btn>
           </template>
-          <div style="position: relative;">
-          <!-- <img  src="/src/assets/Rectangle.png" alt="" style="position: absolute;"> -->
+          <div>
+          <img  src="/assets/Rectangle.png" alt="" class="rectangle">
           </div>
         </v-card>
       </v-dialog>
@@ -41,6 +54,9 @@
       data () {
         return {
           dialog: false,
+          socials:[
+          {icon: '', link: ''}
+          ]
         }
       },
     }

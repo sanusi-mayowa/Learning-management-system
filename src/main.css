@@ -136,6 +136,18 @@ body {
     margin-top: 8px;
     margin-left: -16px;
 }
+.v-card.user-info{
+    position: relative !important;
+    /* overflow: hidden !important; */
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+}
+.rectangle{
+    position: absolute !important;
+    width: 100%;
+    max-width: 600px;
+    bottom: 0 !important;
+}
 @media screen and (max-width: 959px) {
     .status , .unit{
         display: block;
