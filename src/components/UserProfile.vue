@@ -17,7 +17,7 @@
         </template>
   
         <v-card class="bg-user rounded user-info">
-            <div class="d-flex align-center justify-space-between px-5 py-2">
+            <div class="d-flex align-center justify-space-between px-5 py-5">
             <img :width="45" src="/assets/Small Logo.png" alt="">
             </div>
             <div class="text-center" style="position: relative;">
@@ -31,14 +31,16 @@
               <div>
                 <v-btn flat class="bg-email" style="font-size: 12px;">joeylenerivera@gmail.com</v-btn>
               </div>
-              <ul class="d-flex align-center justify-center" v-for="social in socials" :key="social.id">
-                <li><a href="http://" target="_blank"></a></li>
+              <ul class="d-flex align-center justify-center mt-3">
+                <li v-for="social in socials" :key="social.id">
+                    <a :href="social.url" target="_blank" class="mx-4">
+                    <i :class="social.iconClass"></i>
+                    </a>
+                </li>
               </ul>
-            </div>
-            
-        
+            </div>        
             <template v-slot:actions>
-            <v-btn @click="dialog = false" class="mb-5 mr-5">
+            <v-btn @click="dialog = false" class="mb-5 mr-5 back">
               Back
             </v-btn>
           </template>
@@ -55,12 +57,24 @@
         return {
           dialog: false,
           socials:[
-          {icon: '', link: ''}
+          { iconClass: 'bi bi-twitter', url: 'https://twitter.com' },
+          { iconClass: 'bi bi-linkedin', url: 'https://linkedin.com' },
+          { iconClass: 'bi bi-github', url: 'https://github.com' },
+          { iconClass: 'bi bi-facebook', url: 'https://facebook.com' },
           ]
         }
       },
     }
 </script>
 <style>
-
+li{
+  list-style-type: none;
+}
+li, a, i{
+  color: #A79AE0;
+  font-size: 20px !important;
+}
+.back{
+  margin-right: 90px !important;
+}
 </style>
