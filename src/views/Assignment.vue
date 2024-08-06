@@ -312,7 +312,7 @@ export default{
     }
 }
 </script>
-<style>
+<style scoped>
 .v-chip.Late{
     background: tomato;
 }
@@ -333,8 +333,8 @@ export default{
     margin-right: -5px !important;
 }
 .nav-tabs-child.mx-5{
-    margin-left: -10px !important;
-    margin-right: -10px !important;
+    margin-left: -4px !important;
+    margin-right: -4px !important;
 }
 }
 </style>

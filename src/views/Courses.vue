@@ -167,7 +167,7 @@ export default{
     }
 }
 </script>
-<style>
+<style scoped>
 @media screen and (max-width: 600px) {
 .px-5{
     padding-right: 10px !important;

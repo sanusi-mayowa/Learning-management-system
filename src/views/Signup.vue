@@ -113,7 +113,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .text-label{
   font-size: 18px;
   font-weight: 400;

@@ -3,15 +3,25 @@
         <v-row>
             <v-col col="12" md="5">
                 <v-card flat>
-                    <div class="d-flex justify-space-between align-center px-2 py-2 mx-2 my-2" v-for="setting in settings" :key="setting.id" style="cursor: pointer;">
-                        <div class="d-flex align-center">
-                            <img :width="15" :src="setting.icon" alt="">
-                            <p class="ml-2" style="font-size: 13px; font-weight: 500;">{{ setting.text }}</p>
-                        </div>
-                        <div>
-                            <img :width="8" :src="setting.backward" alt="">
-                        </div>
-                    </div>
+                    <v-list nav>
+          <v-list-item
+            v-for="(setting, i) in settings"
+            :key="i"
+            :to="setting.route"
+            router
+            class=""
+          >
+          <div class="d-flex justify-space-between align-center">
+            <div class="d-flex align-center">
+              <img :width="15" :src="setting.icon">
+            <v-list-item-title class="text-black ml-2">{{ setting.text }}</v-list-item-title>
+            </div>
+            <div>
+                <img :width="8" :src="setting.backward" alt="">
+            </div>
+            </div>
+          </v-list-item>
+        </v-list>
                 </v-card>
                 <div class="d-flex justify-space-between mt-3">
                     <div></div>
@@ -30,13 +40,13 @@ export default{
     data(){
         return{
             settings:[
-                { icon: '/assets/bell.png', text: 'Notifications', backward:'/assets/Backward.png'},
-                { icon: '/assets/password.png', text: 'Change Password', backward:'/assets/Backward.png'},
+                { icon: '/assets/bell.png', text: 'Notifications', backward:'/assets/Backward.png', route: ''},
+                { icon: '/assets/password.png', text: 'Change Password', backward:'/assets/Backward.png', route: '/forgotpassword'},
                 { icon: '/assets/security.png', text: 'Security', backward:'/assets/Backward.png'},
                 { icon: '/assets/friends.png', text: 'Friends', backward:'/assets/Backward.png'},
                 { icon: '/assets/notifications.png', text: 'Enable Two Step Verification  ', backward:'/assets/Backward.png'},
                 { icon: '/assets/smile.png', text: 'Display and languages', backward:'/assets/Backward.png'},
-                { icon: '/assets/search.png', text: 'Help', backward:'/assets/Backward.png'},
+                { icon: '/assets/search.png', text: 'Help', backward:'/assets/Backward.png', route: '/help'},
             ]
         }
     }
