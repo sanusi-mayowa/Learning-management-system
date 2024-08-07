@@ -5,7 +5,6 @@
     permanent
     class="bg-btn sidebar" app
   >
-    <!-- Your existing navigation drawer content -->
     <v-list-item class="d-flex justify-space-between align-center px-0 logo">
       <img :width="100" src="/assets/oxfordtrans 1.png" alt="">
       <template v-slot:append>
@@ -40,7 +39,6 @@
     </div>
   </v-navigation-drawer>
   
-  <!-- Main app bar -->
   <v-app-bar app flat class="bg-primary pt-5 topbar">
     <v-toolbar-title class="pl-5">
       <span class="text-btn intro">{{ pageTitle }}</span>
@@ -54,12 +52,11 @@
     </v-btn>
   </v-app-bar>
 
-  <!-- Notification drawer -->
   <v-navigation-drawer
     v-model="notificationDrawer"
     temporary
     location="right"
-    class="notification-drawer bg-btn"
+    class="notification-drawer bg-notification notification-big"
   >
     <Notification />
   </v-navigation-drawer>
@@ -106,11 +103,14 @@ export default {
 <style scoped>
 .notification-drawer {
   height: 550px !important;
+  border: none !important;
 }
 .v-navigation-drawer__scrim{
   background: transparent !important;
 }
 .v-navigation-drawer--temporary.v-navigation-drawer--active {
+  width: 370px !important;
   box-shadow: none !important;
+  position: fixed !important;
 }
 </style>

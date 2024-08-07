@@ -10,9 +10,9 @@
           <span class="text-btn intro">{{ pageTitle}}</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn variant="plain">
-        <img :width="25" src="/assets/notification (1) 1.png" alt="">
-      </v-btn>
+        <v-btn flat variant="plain" @click="toggleNotifications">
+      <img :width="25" src="/assets/notification (1) 1.png" alt="">
+    </v-btn>
       <v-btn variant="plain">
         <img :width="25" src="/assets/message 1.png" alt="">
       </v-btn>
@@ -51,13 +51,23 @@
         </v-list>
       </div>
       </v-navigation-drawer>
-      
+      <v-navigation-drawer
+    v-model="notificationDrawer"
+    temporary
+    location="right"
+    class="notification-drawer bg-notification notification-small"
+  >
+    <Notification />
+  </v-navigation-drawer>
 </template>
 <script>
+import Notification from '@/components/Notification.vue';
 export default {
     name : 'NavbarMobile',
+    components: {Notification},
     data () {
       return{
+        notificationDrawer: false,
       drawer: false,
       group: null,
       links: [
@@ -79,6 +89,23 @@ export default {
       group () {
         this.drawer = false
       },
+      toggleNotifications() {
+      this.notificationDrawer = !this.notificationDrawer;
+    },
     },
   }
 </script>
+<style scoped>
+.notification-drawer {
+  height: 550px !important;
+  border: none !important;
+}
+.v-navigation-drawer__scrim{
+  background: transparent !important;
+}
+.notification-small.v-navigation-drawer--temporary.v-navigation-drawer--active {
+  width: 370px !important;
+  box-shadow: none !important;
+  position: fixed !important;
+}
+</style>

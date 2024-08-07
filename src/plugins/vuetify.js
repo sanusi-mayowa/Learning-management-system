@@ -16,6 +16,7 @@ export default createVuetify({
           user: '#26235C',
           comment: '#F9F871',
           email: '#9082ECA6',
+          notification: '#EBE8D0',
         },
         variables: {
           fontFamily: 'Poppins, sans-serif',

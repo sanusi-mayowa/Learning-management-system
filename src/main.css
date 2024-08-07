@@ -85,6 +85,9 @@ body {
 .desktop{
     display: block !important;
 }
+.notification-big{
+    display: block !important;
+}
 .course:last-child{
     margin-left: 20px !important;
     background: #000 !important;
@@ -172,9 +175,22 @@ body {
         padding-left: 0 !important;
         padding-top: 60px !important;
     }
-    .v-navigation-drawer{
+    .sidebar-small.v-navigation-drawer{
         top: 60px !important;
         height: 100% !important;
         left: 0 !important;
+    }
+    .notification-big{
+        display: none !important;
+    }
+    .notification-small{
+        top: 50px !important;
+    }
+    .top{
+        width: 90% !important;
+        margin-top: 0 !important;
+    }
+    .top-notification-main{
+        margin-top: -6px !important;
     }
 }
