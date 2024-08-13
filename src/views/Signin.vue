@@ -64,7 +64,6 @@ setup() {
   const email = ref('');
   const password = ref('');
   const visible = ref(false);
-  const loading = ref(false);
   const router = useRouter();
   const checkbox = ref(false);
 

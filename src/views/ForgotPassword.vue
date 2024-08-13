@@ -69,3 +69,16 @@ export default {
   }
 };
 </script>
+<style scoped>
+.text-link{
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+}
+.textblack{
+  color: #000000;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+}
+</style>
