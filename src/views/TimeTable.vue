@@ -1,6 +1,6 @@
 <template>
-    <div class="mx-5 my-3 assignment main">
-            <v-tabs v-model="tab" class="mx-5 assignment">
+    <div class="mx-5 my-3 timetable main">
+            <v-tabs v-model="tab" class="mx-5 time">
             <v-tab :value="1" class="bg-btn rounded live">live class</v-tab>
             <v-tab :value="2" class="bg-btn rounded text-uppercase">recorded class</v-tab>
         </v-tabs>
@@ -70,13 +70,13 @@ export default{
     justify-content: space-between !important;
     display: flex !important;
 }
-.assignment.v-tabs--density-default {
+.time.v-tabs--density-default {
     --v-tabs-height: 70px;
 }
-.assignment .v-tab__slider {
+.time .v-tab__slider {
     display: none;
 }
-.assignment.v-tab{
+.time.v-tab{
     padding-left: 20px;
     padding-right: 20px;
 }

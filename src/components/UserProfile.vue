@@ -22,7 +22,7 @@
             </div>
             <div class="text-center" style="position: relative;">
               <img :width="200" src="/assets/user.png" alt="user profile">
-              <img :width="166" src="/assets/Ellipse.png" alt="" style="position: absolute; right: 32%; bottom: -1.5px;">
+              <img :width="166" src="/assets/Ellipse.png" alt="" style="position: absolute; right: 32%; bottom: -1.5px;" class="round">
             </div>
             <div class="text-center mt-3">
               <p class="text-h5 mb-1">Alex</p>
@@ -76,5 +76,10 @@ li, a, i{
 }
 .back{
   margin-right: 90px !important;
+}
+@media screen and (max-width: 600px){
+  .round{
+    right: 25% !important;
+  }
 }
 </style>
