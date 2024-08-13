@@ -13,7 +13,7 @@
         <v-btn flat variant="plain" @click="toggleNotifications">
       <img :width="25" src="/assets/notification (1) 1.png" alt="">
     </v-btn>
-      <v-btn variant="plain">
+      <v-btn variant="plain" :to="{ path: '/forum' }">
         <img :width="25" src="/assets/message 1.png" alt="">
       </v-btn>
       </v-app-bar>

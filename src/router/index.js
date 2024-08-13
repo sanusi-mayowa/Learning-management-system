@@ -1,4 +1,3 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
@@ -9,7 +8,7 @@ import Home from '@/views/Home.vue';
 import Courses from '@/views/Courses.vue';
 import Assignment from '@/views/Assignment.vue';
 import TimeTable from '@/views/TimeTable.vue';
-
+import Forum from '@/views/Forum.vue';
 import Settings from '@/views/Settings.vue';
 
 const routes = [
@@ -108,7 +107,19 @@ const routes = [
         meta: {title: 'Settings'}
       }
     ]
-  }
+  },
+  {
+    path: '/forum',
+    component: DefaultLayout,
+    children:[
+      {
+        path: '',
+        name: 'Forum',
+        component: Forum,
+        meta: {title: 'Forum'}
+      }
+    ]
+  },
 ];
 
 const router = createRouter({
