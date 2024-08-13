@@ -57,6 +57,7 @@
     temporary
     location="right"
     class="notification-drawer bg-notification notification-big"
+    
   >
     <Notification />
   </v-navigation-drawer>

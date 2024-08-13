@@ -4,28 +4,30 @@
             <v-tab :value="1" class="bg-btn rounded live">live class</v-tab>
             <v-tab :value="2" class="bg-btn rounded text-uppercase">recorded class</v-tab>
         </v-tabs>
-    <v-card flat class="mx-5 mt-5 py-2 bg-table pl-3">
-        <v-row class="d-none d-md-flex assignment-row">
+        <div class="mx-5 mt-5">
+    <v-card flat class="mt-5 px-4 py-2 bg-table d-none d-md-flex">
+        <v-row class="d-none d-md-flex">
     <v-col cols="12" md="3" class="checkbox">
-        <div class="mt-1"><img :width="18" src="/public/assets/Checkbox.png" alt=""></div>
-      <div>Lecture Name</div>
+        <div class="mt-1"><img :width="15" src="/assets/Checkbox.png" alt=""></div>
+      <div class="text-grey">Lecture Name</div>
     </v-col>
     <v-col cols="12" md="3">
-      <div>Subject</div>
+      <div class="text-grey">Subject</div>
     </v-col>
     <v-col cols="12" md="2">
-      <div>Start Time</div>
+      <div class="text-grey">Start Time</div>
     </v-col>
     <v-col cols="12" md="2">
-      <div>End Time</div>
+      <div class="text-grey">End Time</div>
     </v-col>
     <v-col cols="12" md="2">
-      <div>Date</div>
+      <div class="text-grey">Date</div>
     </v-col>
   </v-row>
     </v-card>
-    <div class="nav-tabs-child pt-1 px-5">
-        <v-card class="nav-tabs-child" flat>
+    </div>
+    <div class="mt-2">
+        <v-card  flat class="mx-5">
     <v-tabs-window v-model="tab">
       <v-tabs-window-item :value="1">
       <v-container fluid>
@@ -87,4 +89,5 @@ export default{
     align-items: center;
     gap: 10px;
 }
+
 </style>
