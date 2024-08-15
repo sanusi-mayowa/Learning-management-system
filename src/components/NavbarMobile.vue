@@ -89,9 +89,9 @@ export default {
       group () {
         this.drawer = false
       },
-    //   toggleNotifications() {
-    //   this.notificationDrawer = !this.notificationDrawer;
-    // },
+      toggleNotifications() {
+      this.notificationDrawer = !this.notificationDrawer;
+    },
     },
   }
 </script>
