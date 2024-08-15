@@ -89,9 +89,9 @@ export default {
       group () {
         this.drawer = false
       },
-      toggleNotifications() {
-      this.notificationDrawer = !this.notificationDrawer;
-    },
+    //   toggleNotifications() {
+    //   this.notificationDrawer = !this.notificationDrawer;
+    // },
     },
   }
 </script>
@@ -99,6 +99,7 @@ export default {
 .notification-drawer {
   height: 550px !important;
   border: none !important;
+  display: none !important;
 }
 .v-navigation-drawer__scrim{
   background: transparent !important;
@@ -107,5 +108,7 @@ export default {
   width: 370px !important;
   box-shadow: none !important;
   position: fixed !important;
+  display: block !important;
+
 }
 </style>
