@@ -109,6 +109,5 @@ export default {
   box-shadow: none !important;
   position: fixed !important;
   display: block !important;
-
 }
 </style>
