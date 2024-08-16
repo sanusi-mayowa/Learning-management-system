@@ -7,8 +7,8 @@
           <v-card-text>
             <div class="d-flex justify-center">
               <div>
-                <v-img :width="200" src="/assets/oxfordtrans 1.png" contain></v-img>
-                <div class="text-label text-dark text-center">Sign in Your Account</div>
+                <v-img :width="150" src="/assets/logo2.png" contain class="pb-5 ml-2"></v-img>
+                <div class="text-label text-dark text-center pt-3">Sign in Your Account</div>
               </div>
             </div>
              <v-form class="mt-2 px-5" @submit.prevent="submitForm">
@@ -78,7 +78,6 @@ setup() {
   ];
 
   const submitForm = async () => {
-    loading.value = true;
     try {
       await login(email.value, password.value);
       router.push('/home');

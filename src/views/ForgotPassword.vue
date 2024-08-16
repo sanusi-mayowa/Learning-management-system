@@ -7,13 +7,13 @@
           <v-card-text>
             <div class="d-flex justify-center">
               <div>
-                  <v-img :width="200" src="/assets/oxfordtrans 1.png" contain></v-img>
-                  <div class="text-label text-dark text-center mb-5">Forgot Password</div>
+                <v-img :width="150" src="/assets/logo2.png" contain class="pb-5"></v-img>
+                  <div class="text-label text-dark text-center mb-3 pt-3">Forgot Password</div>
                 </div>
               </div>
                <v-form class="mt-5 px-5" @submit.prevent="submitForm">
                 <div class="mt-5">
-                  <div class="text-label text-dark text-center mt-5">Email</div>
+                  <div class="text-label text-dark mt-5">Email</div>
                   <v-text-field 
                     v-model="email" 
                     :rules="emailRules" 
@@ -80,5 +80,10 @@ export default {
   font-family: inherit;
   font-weight: 500;
   font-size: 15px;
+}
+.text-label{
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
 }
 </style>

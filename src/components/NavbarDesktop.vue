@@ -5,14 +5,13 @@
     permanent
     class="bg-btn sidebar" app
   >
-    <v-list-item class="d-flex justify-space-between align-center px-0 logo">
-      <img :width="100" src="/assets/oxfordtrans 1.png" alt="">
+    <v-list-item class="d-flex justify-space-between align-center px-4 logo mt-4">
+      <img :width="100" src="/assets/logo.png" alt="" class="pl-4">
       <template v-slot:append>
         <v-btn
           variant="text"
-          class="ham"
         >
-          <img :width="30" src="/assets/Group 37962.png" class="pr-1">
+          <img :width="30" src="/assets/Group 37962.png">
         </v-btn>
       </template>
     </v-list-item>

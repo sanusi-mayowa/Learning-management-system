@@ -109,5 +109,6 @@ export default {
   box-shadow: none !important;
   position: fixed !important;
   display: block !important;
+  transition: all .3s ease;
 }
 </style>
