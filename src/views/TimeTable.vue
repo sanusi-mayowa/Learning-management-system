@@ -8,7 +8,7 @@
     <v-card flat class="mt-5 px-4 py-2 bg-table d-none d-md-flex">
         <v-row class="d-none d-md-flex">
     <v-col cols="12" md="3" class="checkbox">
-        <div class="mt-1"><img :width="15" src="/assets/Checkbox.png" alt=""></div>
+        <div class="mt-1 mr-1"><img :width="15" src="/assets/Checkbox.png" alt=""></div>
       <div class="text-grey">Lecturer Name</div>
     </v-col>
     <v-col cols="12" md="3">
