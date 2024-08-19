@@ -9,7 +9,7 @@
         <v-row class="d-none d-md-flex">
     <v-col cols="12" md="3" class="checkbox">
         <div class="mt-1"><img :width="15" src="/assets/Checkbox.png" alt=""></div>
-      <div class="text-grey">Lecture Name</div>
+      <div class="text-grey">Lecturer Name</div>
     </v-col>
     <v-col cols="12" md="3">
       <div class="text-grey">Subject</div>
@@ -81,7 +81,7 @@ export default{
     padding-right: 20px;
 }
 .live.v-tab{
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 40px;
 }
 .checkbox{
@@ -89,5 +89,4 @@ export default{
     align-items: center;
     gap: 10px;
 }
-
 </style>

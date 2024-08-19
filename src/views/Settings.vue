@@ -40,7 +40,7 @@ export default{
     data(){
         return{
             settings:[
-                { icon: '/assets/bell.png', text: 'Noti2fications', backward:'/assets/Backward.png', route: '', click: true },
+                { icon: '/assets/bell.png', text: 'Notifications', backward:'/assets/Backward.png', route: '', click: true },
                 { icon: '/assets/password.png', text: 'Change Password', backward:'/assets/Backward.png', route: '/forgotpassword', click: false },
                 { icon: '/assets/security.png', text: 'Security', backward:'/assets/Backward.png', click: false},
                 { icon: '/assets/friends.png', text: 'Friends', backward:'/assets/Backward.png', click: false},

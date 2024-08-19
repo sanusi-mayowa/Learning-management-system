@@ -1,7 +1,7 @@
 <template>
       <v-app-bar
         app
-        class="bg-primary px-3 mobilenav"
+        class="bg-primary  mobilenav"
         prominent
         flat
       >
@@ -24,8 +24,8 @@
         class="bg-btn sidebar-small"
         persistent
       >
-      <v-list-item class="d-flex justify-space-between align-center px-0 logo">
-        <img :width="100" src="/assets/oxfordtrans 1.png" alt="">
+      <v-list-item class="d-flex justify-space-between ml-5 align-center px-0 logo pt-5">
+        <img :width="100" src="/assets/logo.png" alt="" class="ml-1">
         <template v-slot:append>
         </template>
       </v-list-item>

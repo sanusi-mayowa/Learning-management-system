@@ -147,9 +147,28 @@ body {
     max-width: 600px;
     bottom: 0 !important;
 }
+.user-info{
+    overflow-y: hidden !important;
+}
 @media screen and (max-width: 959px) {
     .status , .unit{
         display: block;
+    }
+}
+@media screen and (max-width: 905px) {
+    .user-info .py-5{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+}
+@media screen and (max-width: 885px) {
+    .user-info .py-5{
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+    }
+    .text.py-3{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
     }
 }
 @media screen and (max-width: 600px) {
@@ -185,5 +204,46 @@ body {
     }
     .top-notification-main{
         margin-top: -6px !important;
+    }
+}
+@media screen and (max-width: 425px) {
+    .settings.mx-5, .home.mx-5 {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .timetable.mx-5{
+        margin-right: -10px !important;
+        margin-left: -10px !important;
+    }
+    .time.v-tab{
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+    }
+    .user-info .py-5{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .profile-img{
+        width: 150px !important;
+    }
+    .round{
+        width: 130px;
+        right: 20%;
+    }
+    .back.mb-5{
+        margin-bottom: 5px !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .text.mx-5{
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .text.px-5{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    .round{
+        display: none;
     }
 }

@@ -21,13 +21,13 @@
             <img :width="45" src="/assets/Small Logo.png" alt="">
             </div>
             <div class="text-center" style="position: relative;">
-              <img :width="200" src="/assets/user.png" alt="user profile">
+              <img :width="200" src="/assets/user.png" alt="user profile" class="profile-img">
               <img :width="166" src="/assets/Ellipse.png" alt="" style="position: absolute; right: 32%; bottom: -1.5px;" class="round">
             </div>
             <div class="text-center mt-3">
               <p class="text-h5 mb-1">Alex</p>
               <span class="text-grey">HND in  Computing </span>
-              <p class="py-3 px-5 mx-5" style="font-size: 13px;">A kiddo who uses <span class="text-comment"> Bootstrap</span> and <span class="text-comment"> Laravel</span> in web development. Currently playing around with design via Figma</p>
+              <p class="py-3 px-5 mx-5 text" style="font-size: 13px;">A kiddo who uses <span class="text-comment"> Bootstrap</span> and <span class="text-comment"> Laravel</span> in web development. Currently playing around with design via Figma</p>
               <div>
                 <v-btn flat class="bg-email" style="font-size: 12px;">joeylenerivera@gmail.com</v-btn>
               </div>
@@ -73,9 +73,6 @@ li{
 li, a, i{
   color: #A79AE0;
   font-size: 20px !important;
-}
-.back{
-  margin-right: 90px !important;
 }
 @media screen and (max-width: 600px){
   .round{
