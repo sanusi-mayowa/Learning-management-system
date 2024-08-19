@@ -85,6 +85,9 @@ body {
 .desktop{
     display: block !important;
 }
+.v-toolbar-title__placeholder {
+    overflow: visible !important;
+}
 .course:last-child{
     margin-left: 20px !important;
     background: #000 !important;
