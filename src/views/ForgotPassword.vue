@@ -11,7 +11,7 @@
                   <div class="text-label text-dark text-center mb-3 pt-3">Forgot Password</div>
                 </div>
               </div>
-               <v-form class="mt-5 px-5" @submit.prevent="submitForm">
+               <v-form class="mt-5 form px-5" @submit.prevent="submitForm">
                 <div class="mt-5">
                   <div class="text-label text-dark mt-5">Email</div>
                   <v-text-field 

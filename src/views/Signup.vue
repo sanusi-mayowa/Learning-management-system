@@ -11,7 +11,7 @@
                 <div class="text-label text-dark text-center pt-3">Signup in Your Account</div>
               </div>
             </div>
-            <v-form ref="form" class="mt-2 px-5" @submit.prevent="submitForm">
+            <v-form ref="form" class="mt-2 form px-5" @submit.prevent="submitForm">
               <div>
                 <div class="text-label text-dark">Username</div>
                 <v-text-field 

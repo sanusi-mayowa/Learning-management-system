@@ -11,7 +11,7 @@
                 <div class="text-label text-dark text-center pt-3">Sign in Your Account</div>
               </div>
             </div>
-             <v-form class="mt-2 px-5" @submit.prevent="submitForm">
+             <v-form class="mt-2 form px-5" @submit.prevent="submitForm">
               <div>
                 <div class="text-label text-dark">Email</div>
                 <v-text-field 
@@ -45,7 +45,7 @@
               <v-btn block class="bg-btn"
                type="submit" flat>Sign In</v-btn>
             </v-form>
-            <div class="px-5 mt-5 text-link">Don't have an account? <span class="text-link"><router-link to="/signup" class="textblack">sign up</router-link></span></div>
+            <div class="px-5 account mt-5 text-link">Don't have an account? <span class="text-link"><router-link to="/signup" class="textblack">sign up</router-link></span></div>
           </v-card-text>
         </v-card>
       </v-col>

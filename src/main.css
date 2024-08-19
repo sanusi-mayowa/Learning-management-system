@@ -233,6 +233,11 @@ body {
     .back.mb-5{
         margin-bottom: 5px !important;
     }
+    .form.px-5, .account.px-5{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    
 }
 @media screen and (max-width: 320px) {
     .text.mx-5{
