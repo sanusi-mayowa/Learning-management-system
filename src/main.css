@@ -79,10 +79,10 @@ body {
 .mobilenav{
     position: fixed !important;
 }
-.mobile{
+.mobile , .mobilechat{
     display: none !important;
 }
-.desktop{
+.desktop, .desktop{
     display: block !important;
 }
 .v-toolbar-title__placeholder {
@@ -183,10 +183,10 @@ body {
         top: 0 !important;
         width: 100% !important;
     }
-    .desktop{
+    .desktop, .desktopchat{
         display: none !important;
     }
-    .mobile{
+    .mobile, .mobilechat{
         display: block !important;
     }
     .v-main{
