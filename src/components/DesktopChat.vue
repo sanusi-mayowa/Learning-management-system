@@ -14,8 +14,13 @@
           <div class="wrap">
             <div class="mt-1">
               <v-card class="bg-transparent" flat>
-                <h3 class="ml-4 mt-1 text-black ">Lectures</h3>
-                <v-row v-for="lecture in lectures" :key="lecture.id" class="lecturer">
+                <h3 class="ml-4 mt-1 text-black">Lectures</h3>
+                <v-row
+                  v-for="lecture in lectures"
+                  :key="lecture.id"
+                  class="lecturer"
+                  @click="selectContact(lecture)"
+                >
                   <v-col cols="2">
                     <img :width="35" :src="lecture.avatar" class="mt-2" />
                   </v-col>
@@ -37,6 +42,7 @@
                   class="student"
                   v-for="student in students"
                   :key="student.id"
+                  @click="selectContact(student)"
                 >
                   <v-col cols="2">
                     <img :width="35" :src="student.avatar" class="mt-1" />
@@ -64,14 +70,18 @@
         </div>
       </v-col>
       <!-- Chat window -->
-      <v-col cols="8" class="chat-window">
-        <v-card flat class="" style="background-color: #E8F0F2">
+      <v-col cols="8" class="chat-window" v-if="selectedContact">
+        <v-card flat class="bg-transparent">
           <div class="d-flex align-center px-3 justify-space-between pt-1">
             <div class="d-flex align-center cursor-pointer">
-              <div><img :width="50" src="/assets/Ellipse 6.png" alt="" /></div>
+              <div>
+                <img :width="50" :src="selectedContact.avatar" alt="" />
+              </div>
               <div class="ml-2 anil-profile">
-                <h3 class="text-black">Anil</h3>
-                <span class="text-grey">Online - Last seen, 2.02pm</span>
+                <h3 class="text-black">{{ selectedContact.name }}</h3>
+                <span class="text-grey"
+                  >Online - Last seen, {{ selectedContact.time }}</span
+                >
               </div>
             </div>
             <div class="d-flex request">
@@ -97,7 +107,12 @@
               </div>
               <v-menu offset-y>
                 <template v-slot:activator="{ props }">
-                  <v-btn flat v-bind="props" varient="plain" class="bg-transparent">
+                  <v-btn
+                    flat
+                    v-bind="props"
+                    varient="plain"
+                    class="bg-transparent"
+                  >
                     <img
                       :width="20"
                       :height="20"
@@ -113,42 +128,66 @@
                     router
                     :to="setting.route"
                   >
-                    <v-list-item-title class="text-grey">{{ setting.text }}</v-list-item-title>
+                    <v-list-item-title class="text-grey">{{
+                      setting.text
+                    }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
               </v-menu>
             </div>
           </div>
           <v-divider class="my-1 mx-4"></v-divider>
-          <div class="chat-room px-3 py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, quas rerum. Illo saepe totam ad facilis consectetur eligendi ipsum deserunt quos similique molestias maxime vero beatae ab, rerum, eos, nulla repellendus assumenda eum minus? Libero porro sequi magni cupiditate molestias sint reprehenderit repellendus hic dignissimos deserunt. Incidunt illo neque officia perferendis blanditiis totam est facere. Sequi qui enim nesciunt eaque dolorum quos omnis voluptates nulla, esse facilis et dolorem dicta hic perferendis cupiditate? Ipsa, adipisci facilis expedita similique nemo repellendus sit corporis. Repellat harum molestias, perferendis quisquam aliquam necessitatibus provident doloribus alias nam est pariatur minima tempora aut laborum sint id exercitationem possimus dolore a temporibus ab, aliquid odit porro! Harum eveniet, accusantium repellat eos saepe delectus alias aliquid earum id quasi necessitatibus est qui laborum rem laudantium quae debitis sapiente dolorum labore adipisci quas. Ex repellendus eligendi, quos aliquam laudantium voluptates quas recusandae quia illo enim, natus obcaecati tempore dolorum culpa harum veniam sit? Maxime corporis ducimus cumque repellat dolore nesciunt vitae, officiis porro tenetur sequi omnis est in voluptates molestias doloribus. Consequuntur voluptatum rerum quod eum, amet laudantium velit sunt, facere nobis aut voluptas aperiam tempora consectetur doloremque mollitia quidem, veniam accusamus. Tenetur delectus obcaecati ipsum quibusdam deserunt, omnis perspiciatis distinctio, dolorum dolorem sint accusantium odit, impedit iste! Et nesciunt accusantium neque, nihil repellat fuga? Ex possimus pariatur ipsa, maxime, tempore, mollitia est iusto veniam aliquam ducimus maiores adipisci deleniti natus? Ducimus repellendus ex libero, tempora ut maxime laborum amet impedit dolore, fuga beatae ipsam quibusdam excepturi ab asperiores! Iure, magni eum consequuntur alias recusandae, autem nobis in ex quibusdam non amet atque quod dolor officia consectetur? Pariatur autem architecto tempore explicabo cum aperiam est excepturi vero tempora ea magnam, vel facilis quis obcaecati officiis, a quidem possimus corrupti illum et inventore consectetur necessitatibus eum! Aspernatur culpa, amet voluptates perspiciatis saepe, explicabo sed dolorem temporibus doloribus quis nostrum nobis velit accusantium laborum molestiae assumenda corrupti nesciunt beatae vel! Dicta, laborum placeat perspiciatis reiciendis rerum velit praesentium. Ipsam quasi minima sunt, perspiciatis corporis, suscipit fuga, ab nobis voluptatibus animi harum molestias impedit? Quas, vero. Nisi magnam, officiis eius cum natus recusandae accusamus neque voluptatem explicabo labore odio consectetur consequuntur libero impedit ipsum doloremque cupiditate placeat, velit aut porro, omnis quam aperiam suscipit? Dolores neque nobis quisquam deserunt dolorum veniam voluptates exercitationem esse vel! Explicabo, perferendis ipsa impedit atque sequi nesciunt quasi libero exercitationem nostrum provident! Reprehenderit, dignissimos! At enim animi cumque numquam fugiat nesciunt culpa maxime reiciendis magni error. Mollitia qui quibusdam, enim repellendus possimus explicabo at architecto doloremque illo laborum quia, sequi animi suscipit molestias recusandae necessitatibus, quod ipsa sunt? Amet ratione sed rerum obcaecati quo autem non aliquam sunt in praesentium dignissimos minima reprehenderit asperiores, neque repellendus a nobis! Nulla illo harum corporis quae officia ea neque vel, voluptas perferendis molestiae provident, libero a itaque nemo voluptatibus eum. Magnam ratione, necessitatibus doloremque eum ab, corrupti harum neque ex omnis, sit voluptates quam saepe fugit odio mollitia ea. Laudantium corporis eius molestiae expedita repudiandae quae corrupti suscipit at.</div>
+          <div class="chat-room px-3 py-2">
+            <div
+              v-for="(message, index) in chats[selectedContact.name]"
+              :key="index"
+            >
+              <button class="bg-blue message-receiver px-2 py-1 rounded mt-2">{{ message }}</button>
+            </div>
+          </div>
           <div class="px-3 py-2">
-            input section
+            <div class="d-flex align-center justify-center">
+              <span>
+                <i class=""></i>
+                <input
+                  v-model="newMessage"
+                  type="text"
+                  placeholder="Message"
+                  @keyup.enter="sendMessage"
+                />
+              </span>
+            </div>
           </div>
         </v-card>
       </v-col>
     </v-row>
   </div>
 </template>
-
 <script>
 export default {
   name: "DesktopChat",
   data() {
     return {
+      search: "",
+      selectedContact: null,
+      newMessage: "",
       lectures: [
         {
+          id: 1,
           avatar: "/assets/Ellipse 3.png",
           name: "Mr. Niruban",
           day: "Today,",
           time: "9.52pm",
         },
         {
+          id: 2,
           avatar: "/assets/Ellipse 4.png",
           name: "Mr. Sam",
           day: "Yesterday,",
           time: "12.31pm",
         },
         {
+          id: 3,
           avatar: "/assets/Ellipse 5.png",
           name: "Mr. Nirmal",
           day: "Wednesday,",
@@ -157,6 +196,7 @@ export default {
       ],
       students: [
         {
+          id: 1,
           avatar: "/assets/Ellipse 6.png",
           name: "Anil",
           message: 'April fool"s day ',
@@ -165,6 +205,7 @@ export default {
           messageStatus: "/assets/Vector.png",
         },
         {
+          id: 2,
           avatar: "/assets/Ellipse 7.png",
           name: "Chuuthiya",
           day: "Today",
@@ -172,6 +213,7 @@ export default {
           messageStatus: "/assets/one.png",
         },
         {
+          id: 3,
           avatar: "/assets/Ellipse 8.png",
           name: "Mary",
           message: "You have to report it",
@@ -180,6 +222,7 @@ export default {
           messageStatus: "/assets/one.png",
         },
         {
+          id: 4,
           avatar: "/assets/Ellipse 9.png",
           name: "Bill Gates",
           message: "Never mind",
@@ -188,45 +231,7 @@ export default {
           messageStatus: "/assets/five.png",
         },
         {
-          avatar: "/assets/Ellipse 10.png",
-          name: "Victoria H",
-          message: 'Okay, brother lets"s see ',
-          day: "Wednesday",
-          time: "11.12am",
-          messageStatus: "/assets/Vector.png",
-        },
-        {
-          avatar: "/assets/Ellipse 6.png",
-          name: "Anil",
-          message: 'April fool"s day ',
-          day: "Today",
-          time: "9.52pm",
-          messageStatus: "/assets/Vector.png",
-        },
-        {
-          avatar: "/assets/Ellipse 7.png",
-          name: "Chuuthiya",
-          day: "Today",
-          time: "12.11pm",
-          messageStatus: "/assets/one.png",
-        },
-        {
-          avatar: "/assets/Ellipse 8.png",
-          name: "Mary",
-          message: "You have to report it",
-          day: "Today",
-          time: "2.40pm",
-          messageStatus: "/assets/one.png",
-        },
-        {
-          avatar: "/assets/Ellipse 9.png",
-          name: "Bill Gates",
-          message: "Never mind",
-          day: "Yesterday",
-          time: "12.31pm",
-          messageStatus: "/assets/five.png",
-        },
-        {
+          id: 5,
           avatar: "/assets/Ellipse 10.png",
           name: "Victoria H",
           message: 'Okay, brother lets"s see ',
@@ -235,15 +240,32 @@ export default {
           messageStatus: "/assets/Vector.png",
         },
       ],
-      settings: [
-        { text: "Settings" },
-        { text: "Settings" },
-        { text: "Settings" },
-      ],
+      chats: {
+        "Mr. Niruban": [],
+        "Mr. Sam": [],
+        "Mr. Nirmal": [],
+        Anil: [],
+        Chuuthiya: [],
+        Mary: [],
+        "Bill Gates": [],
+        "Victoria H": [],
+      },
     };
+  },
+  methods: {
+    selectContact(contact) {
+      this.selectedContact = contact;
+    },
+    sendMessage() {
+      if (this.newMessage.trim() && this.selectedContact) {
+        this.chats[this.selectedContact.name].push(this.newMessage);
+        this.newMessage = "";
+      }
+    },
   },
 };
 </script>
+
 <style>
 .chat .search-top {
   position: fixed;
@@ -254,11 +276,14 @@ export default {
   border: none !important;
   outline: none !important;
 }
-.chat .v-field--variant-outlined .v-field__outline__start, .v-field--variant-outlined .v-field__outline__notch::before, .v-field--variant-outlined .v-field__outline__notch::after, .v-field--variant-outlined .v-field__outline__end {
- border: 0 none !important;
+.chat .v-field--variant-outlined .v-field__outline__start,
+.v-field--variant-outlined .v-field__outline__notch::before,
+.v-field--variant-outlined .v-field__outline__notch::after,
+.v-field--variant-outlined .v-field__outline__end {
+  border: 0 none !important;
 }
 .chat .v-field--variant-outlined .v-label.v-field-label--floating {
-  background: #E8F1F2;
+  background: #e8f1f2;
   padding: 10px;
 }
 .chat .v-field--variant-outlined .v-field__outline__start {
@@ -318,9 +343,24 @@ export default {
 .message-status.v-row {
   margin-left: -12px !important;
 }
-.chat-room{
+.chat-room {
   height: 350px !important;
   overflow-y: auto;
   scrollbar-width: none;
+}
+.message-receiver{
+  position: relative;
+  left: 0 !important;
+}
+.message-receiver::after{
+  position: absolute;
+  content: '';
+  background: #000;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  bottom: -8px;
+  right: -10px;
+  border-radius: 50%;
 }
 </style>
