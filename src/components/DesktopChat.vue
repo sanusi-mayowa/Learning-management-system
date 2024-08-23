@@ -14,8 +14,8 @@
           <div class="wrap">
             <div class="mt-1">
               <v-card class="" flat>
-                <h3 class="ml-4 mt-1 text-black">Lectures</h3>
-                <v-row v-for="lecture in lectures" :key="lecture.id">
+                <h3 class="ml-4 mt-1 text-black ">Lectures</h3>
+                <v-row v-for="lecture in lectures" :key="lecture.id" class="lecturer">
                   <v-col cols="2">
                     <img :width="35" :src="lecture.avatar" class="mt-2" />
                   </v-col>
@@ -48,10 +48,10 @@
                   <v-col cols="4" class="stat">
                     <span class="text-grey">{{ student.day }}</span>
                     <v-row class="message-status">
-                      <v-col cols="7">
+                      <v-col cols="8">
                         <span class="text-grey">{{ student.time }}</span>
                       </v-col>
-                      <v-col cols="5">
+                      <v-col cols="4">
                         <img :width="15" :src="student.messageStatus" alt="" />
                       </v-col>
                     </v-row>
@@ -265,7 +265,8 @@ export default {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.wrap .v-row.student:hover {
+.wrap .v-row.student:hover,
+.wrap .v-row.lecturer:hover {
   background: rgba(119, 118, 118, 0.1) !important;
 }
 .chat .v-card {
