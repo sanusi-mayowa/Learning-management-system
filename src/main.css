@@ -1,257 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 body {
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    background: #E8F1F2;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: #e8f1f2;
 }
-.sidebar{
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 20px;
-    border-radius: 16px;
-    padding: 0 0  16px;
-    transition: width 0.4s;
-    height: 95vh !important;
-    position: fixed !important;
+.sidebar {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 20px;
+  border-radius: 16px;
+  padding: 0 0 16px;
+  transition: width 0.4s;
+  height: 95vh !important;
+  position: fixed !important;
 }
-.topbar{
-    position: fixed !important;
+.topbar {
+  position: fixed !important;
 }
-.ham{
-    margin-top: -20px;
+.ham {
+  margin-top: -20px;
 }
-.profile-main{
-    margin-bottom: -15px;
-    margin-top: -15px;
+.profile-main {
+  margin-bottom: -15px;
+  margin-top: -15px;
 }
-.profile{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid #b8b5b5;
-    border-radius: 10px;
-    padding-top: 6px;
-    cursor: pointer;
-    font-size: 13px;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #b8b5b5;
+  border-radius: 10px;
+  padding-top: 6px;
+  cursor: pointer;
+  font-size: 13px;
 }
-.small{
-    font-size: 9px;
-    color: #b8b5b5;
+.small {
+  font-size: 9px;
+  color: #b8b5b5;
 }
 .sidebar-btn {
-    gap: 16px;
-    border-top-right-radius: 16px !important;
-    border-top-left-radius: 16px !important;
-    border-bottom-left-radius: 16px !important;
-    border-bottom-right-radius: 16px !important;
-    font-size: 16px;
-    line-height: 1;
-    margin: 13px;
-    width: 200px;
+  gap: 16px;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  font-size: 16px;
+  line-height: 1;
+  margin: 13px;
+  width: 200px;
 }
-.sidebar-btn img{
-    width: 35px;
-    max-width: 35px;
-    min-width: 35px;
-    padding-right: 10px;
-} 
-.v-main{
-    padding-top: 90px !important;
+.sidebar-btn img {
+  width: 35px;
+  max-width: 35px;
+  min-width: 35px;
+  padding-right: 10px;
 }
-.intro{
-    font-weight: 700;
-    font-size: 17px;
+.v-main {
+  padding-top: 90px !important;
 }
-.home .banner{
-    width: 100%;
+.intro {
+  font-weight: 700;
+  font-size: 17px;
 }
-.diploma-img{
-    width: 40px;
-    max-width: 40px;
-    min-width: 40px;
+.home .banner {
+  width: 100%;
 }
-.diploma-round{
-    border-radius: 16px !important;
+.diploma-img {
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
 }
-.diploma-text-span{
-    font-size: 13px !important;
+.diploma-round {
+  border-radius: 16px !important;
 }
-.mobilenav{
-    position: fixed !important;
+.diploma-text-span {
+  font-size: 13px !important;
 }
-.mobile , .mobilechat{
-    display: none !important;
+.mobilenav {
+  position: fixed !important;
 }
-.desktop, .desktop{
-    display: block !important;
+.mobile,
+.mobilechat {
+  display: none !important;
+}
+.desktop,
+.desktop {
+  display: block !important;
 }
 .v-toolbar-title__placeholder {
-    overflow: visible !important;
+  overflow: visible !important;
 }
-.course:last-child{
-    margin-left: 20px !important;
-    background: #000 !important;
+.course:last-child {
+  margin-left: 20px !important;
+  background: #000 !important;
 }
-.nav-tabs{
-    border-top-right-radius: 26px !important;
-    border-top-left-radius: 26px !important;
-    border-bottom-left-radius: 26px !important;
-    border-bottom-right-radius: 26px !important;
+.nav-tabs {
+  border-top-right-radius: 26px !important;
+  border-top-left-radius: 26px !important;
+  border-bottom-left-radius: 26px !important;
+  border-bottom-right-radius: 26px !important;
 }
-.module, .status{
-    font-weight: 500;
+.module,
+.status {
+  font-weight: 500;
 }
-.v-container.Completed, .v-row.Submitted{
-    border-left: 4px solid #3cd1c2 !important;
+.v-container.Completed,
+.v-row.Submitted {
+  border-left: 4px solid #3cd1c2 !important;
 }
-.v-container.Ongoing, .v-row.Pending{
-    border-left: 4px solid orange !important;
+.v-container.Ongoing,
+.v-row.Pending {
+  border-left: 4px solid orange !important;
 }
-.v-container.Pending, .v-row.Late {
-    border-left: 4px solid tomato !important;
+.v-container.Pending,
+.v-row.Late {
+  border-left: 4px solid tomato !important;
 }
-.courses-row{
-    margin: -16px !important;
+.courses-row {
+  margin: -16px !important;
 }
-.v-chip.Completed, .v-chip.Submitted{
-    background: #3cd1c2;
+.v-chip.Completed,
+.v-chip.Submitted {
+  background: #3cd1c2;
 }
-.v-chip.Ongoing , .v-chip.v-chip.Pending{
-    background: orange;
+.v-chip.Ongoing,
+.v-chip.v-chip.Pending {
+  background: orange;
 }
-.v-chip.Pending{
-    background: tomato;
+.v-chip.Pending {
+  background: tomato;
 }
-.status{
-    display: flex;
-    justify-content: end;
+.status {
+  display: flex;
+  justify-content: end;
 }
-.unit{
-    display: flex;
-    justify-content: center;
+.unit {
+  display: flex;
+  justify-content: center;
 }
-.assignment-row div{
-    color: #8A92A6 !important;
-    font-weight: 400 !important;
-    font-size: 15px !important;
+.assignment-row div {
+  color: #8a92a6 !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
 }
-.assignment.v-row{
-    margin-top: 8px;
-    margin-left: -16px;
+.assignment.v-row {
+  margin-top: 8px;
+  margin-left: -16px;
 }
-.v-card.user-info{
-    position: relative !important;
-    border-bottom-left-radius: 35px !important;
-    border-bottom-right-radius: 35px !important;
+.v-card.user-info {
+  position: relative !important;
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
 }
-.rectangle{
-    position: absolute !important;
-    width: 100%;
-    max-width: 600px;
-    bottom: 0 !important;
+.rectangle {
+  position: absolute !important;
+  width: 100%;
+  max-width: 600px;
+  bottom: 0 !important;
 }
-.user-info{
-    overflow-y: hidden !important;
+.user-info {
+  overflow-y: hidden !important;
 }
 @media screen and (max-width: 959px) {
-    .status , .unit{
-        display: block;
-    }
+  .status,
+  .unit {
+    display: block;
+  }
 }
 @media screen and (max-width: 905px) {
-    .user-info .py-5{
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-    }
+  .user-info .py-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
 }
 @media screen and (max-width: 885px) {
-    .user-info .py-5{
-        padding-top: 3px !important;
-        padding-bottom: 3px !important;
-    }
-    .text.py-3{
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-    }
+  .user-info .py-5 {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+  .text.py-3 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
 }
 @media screen and (max-width: 600px) {
-    .sidebar-small{
-        position: fixed !important;
-    }
-    .mobilenav{
-        left: 0 !important;
-        top: 0 !important;
-        width: 100% !important;
-    }
-    .desktop, .desktopchat{
-        display: none !important;
-    }
-    .mobile, .mobilechat{
-        display: block !important;
-    }
-    .v-main{
-        padding-left: 0 !important;
-        padding-top: 60px !important;
-    }
-    .sidebar-small.v-navigation-drawer{
-        top: 60px !important;
-        height: 100% !important;
-        left: 0 !important;
-    }
-    .notification-small{
-        top: 50px !important;
-    }
-    .top{
-        width: 90% !important;
-        margin-top: 0 !important;
-    }
-    .top-notification-main{
-        margin-top: -6px !important;
-    }
+  .sidebar-small {
+    position: fixed !important;
+  }
+  .mobilenav {
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+  .desktop,
+  .desktopchat {
+    display: none !important;
+  }
+  .mobile,
+  .mobilechat {
+    display: block !important;
+  }
+  .v-main {
+    padding-left: 0 !important;
+    padding-top: 60px !important;
+  }
+  .sidebar-small.v-navigation-drawer {
+    top: 60px !important;
+    height: 100% !important;
+    left: 0 !important;
+  }
+  .notification-small {
+    top: 50px !important;
+  }
+  .top {
+    width: 90% !important;
+    margin-top: 0 !important;
+  }
+  .top-notification-main {
+    margin-top: -6px !important;
+  }
 }
 @media screen and (max-width: 425px) {
-    .settings.mx-5, .home.mx-5 {
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-    }
-    .timetable.mx-5{
-        margin-right: -10px !important;
-        margin-left: -10px !important;
-    }
-    .time.v-tab{
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-    }
-    .user-info .py-5{
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-    }
-    .profile-img{
-        width: 150px !important;
-    }
-    .round{
-        width: 130px;
-        right: 20%;
-    }
-    .back.mb-5{
-        margin-bottom: 5px !important;
-    }
-    .form.px-5, .account.px-5{
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-    }
-    
+  .settings.mx-5,
+  .home.mx-5 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .timetable.mx-5 {
+    margin-right: -10px !important;
+    margin-left: -10px !important;
+  }
+  .time.v-tab {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .user-info .py-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .profile-img {
+    width: 150px !important;
+  }
+  .round {
+    width: 130px;
+    right: 20%;
+  }
+  .back.mb-5 {
+    margin-bottom: 5px !important;
+  }
+  .form.px-5,
+  .account.px-5 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 @media screen and (max-width: 320px) {
-    .text.mx-5{
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-    }
-    .text.px-5{
-        padding-right: 10px !important;
-        padding-left: 10px !important;
-    }
-    .round{
-        display: none;
-    }
+  .text.mx-5 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .text.px-5 {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .round {
+    display: none;
+  }
 }

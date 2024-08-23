@@ -6,21 +6,21 @@
     <template class="mobile">
       <NavbarMobile />
     </template>
-    <v-main class="bg-primary" style="min-height: 100vh;">
+    <v-main class="bg-primary" style="min-height: 100vh">
       <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import NavbarDesktop from '@/components/NavbarDesktop.vue';
-import NavbarMobile from '@/components/NavbarMobile.vue';
+import NavbarDesktop from "@/components/NavbarDesktop.vue";
+import NavbarMobile from "@/components/NavbarMobile.vue";
 
 export default {
-  name: 'DefaultLayout',
+  name: "DefaultLayout",
   components: {
     NavbarDesktop,
-    NavbarMobile
+    NavbarMobile,
   },
 };
 </script>

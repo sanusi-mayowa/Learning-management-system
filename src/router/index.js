@@ -1,124 +1,124 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import DefaultLayout from '@/layouts/DefaultLayout.vue';
-import AuthLayout from '@/layouts/AuthLayout.vue';
-import Signin from '@/views/Signin.vue';
-import Signup from '@/views/Signup.vue';
-import ForgotPassword from '@/views/ForgotPassword.vue';
-import Home from '@/views/Home.vue';
-import Courses from '@/views/Courses.vue';
-import Assignment from '@/views/Assignment.vue';
-import TimeTable from '@/views/TimeTable.vue';
-import Forum from '@/views/Forum.vue';
-import Settings from '@/views/Settings.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import AuthLayout from "@/layouts/AuthLayout.vue";
+import Signin from "@/views/Signin.vue";
+import Signup from "@/views/Signup.vue";
+import ForgotPassword from "@/views/ForgotPassword.vue";
+import Home from "@/views/Home.vue";
+import Courses from "@/views/Courses.vue";
+import Assignment from "@/views/Assignment.vue";
+import TimeTable from "@/views/TimeTable.vue";
+import Forum from "@/views/Forum.vue";
+import Settings from "@/views/Settings.vue";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     component: AuthLayout,
     children: [
       {
-        path: '',
-        name: 'Signin',
+        path: "",
+        name: "Signin",
         component: Signin,
-        meta: { title: 'Sign In' }
+        meta: { title: "Sign In" },
       },
     ],
   },
   {
-    path: '/signup',
+    path: "/signup",
     component: AuthLayout,
     children: [
       {
-        path: '',
-        name: 'Signup',
+        path: "",
+        name: "Signup",
         component: Signup,
-        meta: { title: 'Sign Up' }
+        meta: { title: "Sign Up" },
       },
     ],
   },
   {
-    path: '/forgotpassword',
+    path: "/forgotpassword",
     component: AuthLayout,
     children: [
       {
-        path: '',
-        name: 'ForgotPassword',
+        path: "",
+        name: "ForgotPassword",
         component: ForgotPassword,
-        meta: { title: 'Forgot Password' }
+        meta: { title: "Forgot Password" },
       },
     ],
   },
   {
-    path: '/home',
+    path: "/home",
     component: DefaultLayout,
     children: [
       {
-        path: '',
-        name: 'Home',
+        path: "",
+        name: "Home",
         component: Home,
-        meta: { title: 'Dashboard' }
+        meta: { title: "Dashboard" },
       },
     ],
   },
   {
-    path: '/courses',
+    path: "/courses",
     component: DefaultLayout,
     children: [
       {
-        path: '',
-        name: 'Courses',
+        path: "",
+        name: "Courses",
         component: Courses,
-        meta: { title: 'My Courses' }
+        meta: { title: "My Courses" },
       },
     ],
   },
   {
-    path: '/assignments',
+    path: "/assignments",
     component: DefaultLayout,
     children: [
       {
-        path: '',
-        name: 'Assignment',
+        path: "",
+        name: "Assignment",
         component: Assignment,
-        meta: { title: 'Assignment' }
+        meta: { title: "Assignment" },
       },
     ],
   },
   {
-    path: '/timetable',
+    path: "/timetable",
     component: DefaultLayout,
     children: [
       {
-        path: '',
-        name: 'TimeTable',
+        path: "",
+        name: "TimeTable",
         component: TimeTable,
-        meta: { title: 'Time Table' }
+        meta: { title: "Time Table" },
       },
     ],
   },
   {
-    path: '/settings',
+    path: "/settings",
     component: DefaultLayout,
-    children:[
+    children: [
       {
-        path: '',
-        name: 'Settings',
+        path: "",
+        name: "Settings",
         component: Settings,
-        meta: {title: 'Settings'}
-      }
-    ]
+        meta: { title: "Settings" },
+      },
+    ],
   },
   {
-    path: '/forum',
+    path: "/forum",
     component: DefaultLayout,
-    children:[
+    children: [
       {
-        path: '',
-        name: 'Forum',
+        path: "",
+        name: "Forum",
         component: Forum,
-        meta: {title: 'Forum'}
-      }
-    ]
+        meta: { title: "Forum" },
+      },
+    ],
   },
 ];
 
