@@ -1,5 +1,5 @@
 <template>
-  <div class="forum main">
+  <div class="forum main bg-primary" style="height: 100%">
     <div class="desktopchat">
       <DesktopChat />
     </div>
@@ -15,5 +15,3 @@ export default {
   components: { DesktopChat, MobileChat },
 };
 </script>
-<style scoped></style>
-l

@@ -1,5 +1,25 @@
 <template>
-  <div class="px-5 ml-2 chat">
+  <div class="px-5 pt-5 ml-2 chat" style="padding-top: 90px !important">
+    <v-app-bar app flat class="bg-primary topbar">
+      <v-toolbar-title class="pl-2">
+        <span class="text-btn intro">{{ pageTitle }}</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn flat variant="plain" @click="toggleNotifications">
+        <img :width="25" src="/assets/notification (1) 1.png" alt="" />
+      </v-btn>
+      <v-btn variant="plain" :to="{ path: '/forum' }">
+        <img :width="25" src="/assets/message 1.png" alt="" />
+      </v-btn>
+    </v-app-bar>
+    <v-navigation-drawer
+      v-model="notificationDrawer"
+      temporary
+      location="right"
+      class="notification-drawer bg-notification"
+    >
+      <Notification />
+    </v-navigation-drawer>
     <v-row>
       <!-- Sidebar for contacts -->
       <v-col cols="4">
@@ -121,15 +141,19 @@
                     />
                   </v-btn>
                 </template>
-                <v-list class="bg-primary">
+                <v-list class="bg-transparent">
                   <v-list-item
-                    v-for="setting in settings"
-                    :key="setting.text"
+                    v-for="(link, i) in links"
+                    :key="i"
+                    :to="link.route"
                     router
-                    :to="setting.route"
+                    class="bg-list sidebar-btn px-5"
                   >
-                    <v-list-item-title class="text-grey">{{
-                      setting.text
+                    <template v-slot:prepend>
+                      <img :src="link.avatar" />
+                    </template>
+                    <v-list-item-title class="text-black">{{
+                      link.text
                     }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -142,7 +166,9 @@
               v-for="(message, index) in chats[selectedContact.name]"
               :key="index"
             >
-              <button class="bg-blue message-receiver px-2 py-1 rounded mt-2">{{ message }}</button>
+              <button class="bg-blue message-receiver px-2 py-1 rounded mt-2">
+                {{ message }}
+              </button>
             </div>
           </div>
           <div class="px-3 py-2">
@@ -164,13 +190,40 @@
   </div>
 </template>
 <script>
+import Notification from "@/components/Notification.vue";
 export default {
   name: "DesktopChat",
+  components: { Notification },
   data() {
     return {
+      notificationDrawer: false,
       search: "",
       selectedContact: null,
       newMessage: "",
+      links: [
+        { avatar: "/assets/home 2.png", text: "Home", route: "/home" },
+        {
+          avatar: "/assets/online-learning 1.png",
+          text: "My Courses",
+          route: "/courses",
+        },
+        {
+          avatar: "/assets/paper 2.png",
+          text: "Assignments",
+          route: "/assignments",
+        },
+        {
+          avatar: "/assets/schedule 1.png",
+          text: "Time Table",
+          route: "/timetable",
+        },
+        { avatar: "/assets/chat 1.png", text: "Forum", route: "/forum" },
+        {
+          avatar: "/assets/setting 1.png",
+          text: "Settings",
+          route: "/settings",
+        },
+      ],
       lectures: [
         {
           id: 1,
@@ -239,6 +292,15 @@ export default {
           time: "11.12am",
           messageStatus: "/assets/Vector.png",
         },
+        {
+          id: 6,
+          avatar: "/assets/Ellipse 10.png",
+          name: "Victoria H",
+          message: 'Okay, brother lets"s see ',
+          day: "Wednesday",
+          time: "11.12am",
+          messageStatus: "/assets/Vector.png",
+        },
       ],
       chats: {
         "Mr. Niruban": [],
@@ -262,11 +324,36 @@ export default {
         this.newMessage = "";
       }
     },
+    toggleNotifications() {
+      this.notificationDrawer = !this.notificationDrawer;
+    },
+    toggleRail() {
+      this.rail = !this.rail;
+    },
+  },
+  computed: {
+    pageTitle() {
+      return this.$route.meta.title || "Default Title";
+    },
   },
 };
 </script>
 
 <style>
+.chat .notification-drawer {
+  height: 550px !important;
+  border: none !important;
+  display: none !important;
+}
+.chat .v-navigation-drawer__scrim {
+  background: transparent !important;
+}
+.chat .v-navigation-drawer--temporary.v-navigation-drawer--active {
+  width: 370px !important;
+  box-shadow: none !important;
+  position: fixed !important;
+  display: block !important;
+}
 .chat .search-top {
   position: fixed;
 }
@@ -277,9 +364,9 @@ export default {
   outline: none !important;
 }
 .chat .v-field--variant-outlined .v-field__outline__start,
-.v-field--variant-outlined .v-field__outline__notch::before,
-.v-field--variant-outlined .v-field__outline__notch::after,
-.v-field--variant-outlined .v-field__outline__end {
+.chat .v-field--variant-outlined .v-field__outline__notch::before,
+.chat .v-field--variant-outlined .v-field__outline__notch::after,
+.chat .v-field--variant-outlined .v-field__outline__end {
   border: 0 none !important;
 }
 .chat .v-field--variant-outlined .v-label.v-field-label--floating {
@@ -348,13 +435,13 @@ export default {
   overflow-y: auto;
   scrollbar-width: none;
 }
-.message-receiver{
+.message-receiver {
   position: relative;
   left: 0 !important;
 }
-.message-receiver::after{
+.message-receiver::after {
   position: absolute;
-  content: '';
+  content: "";
   background: #000;
   width: 8px;
   height: 8px;

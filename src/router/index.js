@@ -110,7 +110,7 @@ const routes = [
   },
   {
     path: "/forum",
-    component: DefaultLayout,
+    component: AuthLayout,
     children: [
       {
         path: "",
