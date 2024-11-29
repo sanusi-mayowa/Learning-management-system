@@ -2,7 +2,88 @@
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background: #e8f1f2;
+  /* background: #e8f1f2; */
+}
+.register {
+  overflow: hidden !important;
+}
+.text-register-title {
+  color: #5e5873;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.text-register-subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6e6b7b;
+  line-height: 1.45;
+}
+.text-register-subtitle-2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6e6b7b;
+  line-height: 1.45;
+}
+.form-label {
+  color: #6e6b7b;
+  font-weight: 400;
+  font-size: 0.857rem;
+}
+.Vue-Toastification__toast-body {
+  font-family: "Poppins", sans-serif;
+}
+.mobile-logo {
+  display: none !important;
+}
+.checkbox {
+  max-width: 50px !important;
+}
+.forgot-password {
+  position: relative;
+}
+/* .forgot-password::before {
+  background: url("/assets/forgotbefore.png");
+  width: 244px;
+  left: -30px;
+  height: 243px;
+  content: " ";
+  position: absolute;
+  top: -100px;
+}
+.forgot-password:after {
+  background: url("/assets/forgot-after.png");
+  width: 272px;
+  height: 272px;
+  content: " ";
+  position: absolute;
+  right: 10px;
+  top: 10%; */
+/* z-index: -1; */
+/* } */
+/* =========== mobile devices ================== */
+@media (max-width: 425px) {
+  .register .v-row {
+    display: block !important;
+  }
+  .left-col,
+  .right-col {
+    display: none;
+  }
+  .px-10.signup-right {
+    margin-top: 40px !important;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+  .mobile-logo,
+  .login-mobile {
+    display: block !important;
+    z-index: 999 !important;
+    background: #fff !important;
+    width: 100%;
+  }
 }
 .sidebar {
   margin-top: 16px;

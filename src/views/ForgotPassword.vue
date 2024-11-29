@@ -1,104 +1,95 @@
 <template>
-  <section style="width: 100%" class="bg-primary">
-    <v-container
-      class="d-flex justify-center align-center"
-      style="height: 100vh"
-    >
-      <v-row align="center" justify="center">
-        <v-col cols="12" sm="7" md="5" lg="5" class="bg-white rounded-lg mt-5">
-          <v-card class="form-center" flat>
-            <v-card-text>
-              <div class="d-flex justify-center">
-                <div>
-                  <v-img
-                    :width="150"
-                    src="/assets/logo2.png"
-                    contain
-                    class="pb-5"
-                  ></v-img>
-                  <div class="text-label text-dark text-center mb-3 pt-3">
-                    Forgot Password
-                  </div>
-                </div>
-              </div>
-              <v-form class="mt-5 form px-5" @submit.prevent="submitForm">
-                <div class="mt-5">
-                  <div class="text-label text-dark mt-5">Email</div>
-                  <v-text-field
-                    v-model="email"
-                    :rules="emailRules"
-                    variant="outlined"
-                    prepend-inner-icon="bi bi-envelope"
-                    class="rounded-lg text-grey"
-                  ></v-text-field>
-                </div>
-                <v-btn block class="bg-btn" type="submit" flat>Submit</v-btn>
-              </v-form>
-              <div class="d-flex justify-end mt-5 text-link">
-                Already have an account?
-                <span class="text-link">
-                  <router-link to="/" class="textblack">
-                    sign in</router-link
-                  ></span
-                >
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
+  <section class="register d-flex align-center" style="min-height: 100vh">
+    <v-row>
+      <v-col cols="12" md="7" sm="6" class="position-relative left-col">
+        <img
+          src="/assets/forgot-password.svg"
+          style="height: 100% !important; width: 100% !important"
+        />
+        <div class="position-fixed top-0 mt-10 ml-10">
+          <img src="/assets/logo2.png" width="100" alt="" />
+        </div>
+      </v-col>
+      <v-col
+        cols="12"
+        md="5"
+        sm="6"
+        class="d-flex justify-center px-10 signup-right bg-white align-center w-100"
+      >
+        <section class="w-100 mt-8 forgot-password bg-white">
+          <div class="title">
+            <h2 class="text-register-title">Forgot Password? 🔒</h2>
+            <p class="text-register-subtitle">
+              Enter your email and we'll send you a token to reset your
+              password.
+            </p>
+          </div>
+          <v-form
+            ref="form"
+            @submit.prevent="handleForgotPassword"
+            class="mt-3 bg-white w-100"
+          >
+            <div>
+              <div class="form-label">Email</div>
+              <v-text-field
+                v-model="email"
+                :rules="emailRules"
+                variant="outlined"
+                prepend-inner-icon="bi bi-envelope"
+                class="rounded-lg text-grey"
+                label="johndoe@gmail.com"
+              ></v-text-field>
+            </div>
+            <v-btn block class="bg-btn mt-3" type="submit" flat>
+              Send Token
+            </v-btn>
+            <p class="text-center mt-4 text-blue">
+              <i class="bi bi-arrow-left"></i>
+              <router-link to="/" class="text-blue ml-2 text-decoration-none"
+                >Back to Login</router-link
+              >
+            </p>
+          </v-form>
+        </section>
+      </v-col>
+    </v-row>
   </section>
 </template>
 
 <script>
-import { ref } from "vue";
-import { sendResetEmail } from "../auth";
-import { useRouter } from "vue-router";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "@/firebase";
+import { useToast } from "vue-toastification";
 
 export default {
   name: "ForgotPassword",
-  setup() {
-    const email = ref("");
-    const router = useRouter();
-
-    const emailRules = [
-      (v) => !!v || "Email is required",
-      (v) => /.+@.+\..+/.test(v) || "Email must be valid",
-    ];
-
-    const submitForm = async () => {
-      try {
-        await sendResetEmail(email.value);
-        router.push("/");
-      } catch (error) {
-        // Error handling is done in auth.js using SweetAlert2
-      } finally {
-      }
-    };
-
+  data() {
     return {
-      email,
-      emailRules,
-      submitForm,
+      email: "",
+      emailRules: [
+        (v) => !!v || "Email is required",
+        (v) => /.+@.+\..+/.test(v) || "Enter a valid email",
+      ],
     };
+  },
+  methods: {
+    async handleForgotPassword() {
+      const toast = useToast();
+      if (!this.$refs.form.validate()) {
+        toast.error("Please fill out all fields correctly.");
+        return;
+      }
+      try {
+        await sendPasswordResetEmail(auth, this.email);
+        toast.success("Reset email sent! Please check your inbox.");
+      } catch (error) {
+        let errorMessage = "Failed to send reset email.";
+        if (error.code === "auth/user-not-found") {
+          errorMessage = "No user found with this email.";
+        }
+        toast.error(errorMessage);
+      }
+    },
   },
 };
 </script>
-<style scoped>
-.text-link {
-  font-size: 15px;
-  font-weight: 500;
-  font-family: inherit;
-}
-.textblack {
-  color: #000000;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 15px;
-}
-.text-label {
-  font-size: 18px;
-  font-weight: 400;
-  color: #000000;
-}
-</style>

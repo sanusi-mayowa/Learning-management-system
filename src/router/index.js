@@ -11,6 +11,8 @@ import TimeTable from "@/views/TimeTable.vue";
 import Forum from "@/views/Forum.vue";
 import Settings from "@/views/Settings.vue";
 
+import Adminpage from "@/Admin/Admin.vue";
+
 const routes = [
   {
     path: "/",
@@ -37,6 +39,18 @@ const routes = [
     ],
   },
   {
+    path: "/admin",
+    component: AuthLayout,
+    children: [
+      {
+        path: "",
+        name: "Adminpage",
+        component: Adminpage,
+        // meta: { title: "Sign Up" },
+      },
+    ],
+  },
+  {
     path: "/forgotpassword",
     component: AuthLayout,
     children: [
@@ -49,7 +63,7 @@ const routes = [
     ],
   },
   {
-    path: "/home",
+    path: "/dashboard",
     component: DefaultLayout,
     children: [
       {
